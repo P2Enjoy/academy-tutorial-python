@@ -183,6 +183,25 @@ mon_tuple = (5, "Python", True)
 print(mon_tuple[1])  # Python
 ```
 
+**Extra :**
+Vous pouvez manipuler les tuples comme vous l'auriez fait pour les listes en créant d'autres tuples et résultants de vos manipulations: ceci a l'avantage de ne pas altérer les données d'origine.
+```python
+# Append
+my_tuple = (1, 2, 3)
+new_tuple = my_tuple + (4,) #
+print(new_tuple)
+
+# Delete
+my_tuple = (1, 2, 3, 4)
+new_tuple = my_tuple[:2] + my_tuple[3:]
+print(new_tuple)
+
+# Replace
+my_tuple = (1, 2, 3)
+new_tuple = my_tuple[:1] + (4,) + my_tuple[2:]
+print(new_tuple)
+```
+
 **Résumé :**
 - Les tuples sont similaires aux listes, mais ils sont immuables.
 - Vous pouvez utiliser l'indexation pour accéder aux éléments d'un tuple.
