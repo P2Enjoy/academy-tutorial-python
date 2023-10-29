@@ -425,10 +425,6 @@ Vous pouvez par contre utiliser une tuple en guise de clef (ou label) puisque ce
 
 ---
 
-Sure, let's change the examples to revolve around favorite vinyl discs. 
-
----
-
 **11. Le mot-clé 'in'**
 
 **Explication :**
