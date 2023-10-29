@@ -111,7 +111,10 @@ N'oubliez pas que vous pouvez utiliser des tranches pour remplacer ou supprimer 
 ```python
 animaux = ["chat", "chien", "oiseau", "poisson"]
 animaux[:2] = ["tigre", "lion"]
+print(animaux)  # ["tigre", "lion", "oiseau", "poisson"]
+
 animaux[2:] = []
+#del animaux[-2:]
 print(animaux)  # ["tigre", "lion"]
 ```
 
@@ -137,9 +140,7 @@ print(matrix[1][2])  # 6
 ```python
 # Vous avez une liste imbriquée qui représente une matrice 2x2.
 # Imprimez le premier élément de la première liste imbriquée.
-# Imprimez le deuxième élément
-
- de la deuxième liste imbriquée.
+# Imprimez le deuxième élément de la deuxième liste imbriquée.
 ```
 **Conseil :** 
 Utilisez l'indexation pour accéder aux éléments d'une liste imbriquée.
