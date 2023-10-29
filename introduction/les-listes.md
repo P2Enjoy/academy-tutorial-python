@@ -318,40 +318,49 @@ print(annuaire)  # {"Alice": 25, "Bob": 30, "Charlie": 35}
 
 **Explication :**
 
-Les dictionnaires sont l'une des structures de données les plus utilisées en Python. Ils permettent de stocker des paires clé-valeur. Les méthodes telles que `keys()`, `values()` et `items()` sont très utiles pour travailler avec des dictionnaires. La méthode `keys()` renvoie un objet de vue qui affiche une liste de toutes les clés du dictionnaire dans l'ordre d'insertion. La méthode `values()` renvoie une nouvelle vue des valeurs du dictionnaire. Lorsque la méthode `items()` est appelée, elle renvoie une nouvelle vue des éléments du dictionnaire sous forme de tuples dans une liste (paires clé-valeur).
+Les dictionnaires sont l'une des structures de données les plus utilisées en Python. Ils permettent de stocker des paires clé-valeur (aussi appelés parfois label-donnée). Les méthodes telles que `keys()`, `values()` et `items()` sont très utiles pour travailler avec des dictionnaires et permettent:  
+- pour la méthode `keys()` de renvoyer une liste de toutes les clés du dictionnaire dans l'ordre d'insertion.
+- pour la méthode `values()` de renvoyer une liste des valeurs du dictionnaire dans l'ordre d'insertion.
+- pour la méthode `items()` de renvoyer une liste des éléments du dictionnaire sous forme de tuples de (clé, valeur).
 
-L'objet renvoyé par `dict.keys()`, `dict.values()`, et `dict.items()` fournit une vue dynamique sur les entrées du dictionnaire. Cela signifie que lorsque le dictionnaire change, la vue reflète ces changements.
+Les données renvoyé par `dict.keys()`, `dict.values()`, et `dict.items()` sont des vues dites dynamiques, cela signifie que lorsque le dictionnaire change, la vue reflète ces changements.
+Got it! Here's how to achieve that without using loops or list comprehensions:
+
+---
 
 **Exemples :**
 
 ```python
-repertoire_telephonique = {"Jean": 123, "Julie": 234, "Gérard": 345}  # Création d'un nouveau dictionnaire
-print(repertoire_telephonique.keys())
+invitations_courses_halloween = {"Martino": "Entrées", "Julie": "Dessert", "Chloé": "Bonbon"}  # Création d'un nouveau dictionnaire
+print(invitations_courses_halloween.keys())
 
 # Ajout d'un nouvel élément au dictionnaire.
-repertoire_telephonique["Jill"] = 456
+invitations_courses_halloween["Aude"] = "Boissons"
 
-print(repertoire_telephonique.keys())
+print(invitations_courses_halloween.keys())
 
-print(repertoire_telephonique.values())
+print(invitations_courses_halloween.values())
 ```
 
 **Exercices :**
 
-1. Imprimez toutes les valeurs du `repertoire_telephonique`.
+1. Imprimez l'invité en charge des "Boissons".
    ```python
-   # Indice: Utilisez la méthode values().
+   # Indice: Exportez la liste des clés/valeurs, trouvez la valeur de "Boissons" en utilisant l'opérateur index puis utilisez cet indice dans le tableau des clés.
    ```
 
 **Réponses des exercices :**
 
 1. 
    ```python
-   print(repertoire_telephonique.values())
+   clés = list(invitations_courses_halloween.keys())
+   valeurs = list(invitations_courses_halloween.values())
+   indice_boissons = valeurs.index("Boissons")
+   print(clés[indice_boissons])
    ```
    **Sortie :**
    ``` 
-   dict_values([123, 234, 345, 456])
+   Aude
    ```
 
 **Résumé des compétences acquises :**
@@ -366,48 +375,46 @@ print(repertoire_telephonique.values())
 **Explication :**
 
 Les dictionnaires en Python ont certaines contraintes concernant les types de données qui peuvent être utilisés comme clés. Les clés de dictionnaire doivent être de types immuables, comme les chaînes de caractères, les nombres et les tuples. De plus, chaque clé dans un dictionnaire doit être unique.
+Ainsi voue ne pouvez pas utiliser une liste comme clef (ou label) dans un dictionnaire puisque celle *ci, étant mutable, nous ne pouvons pas en garantir l'unicité.
 
-**Exemples :**
+**Lesson :**
 
 ```python
 dictionnaire_ages = {
-    "Alice": 21,
-    "Bob": 39,
-    "Georges": 30,
-    "Susanne": 27,
-    "Robert": 19,
-    ("Ashley", "Alex", "Nancy"): 35
+    "Martino": 40,
+    "Chloé": 27,
+    "Aude": 28,
+    "Julie": 22,
+    "Pierre-Yves": 63,
+    ["Ambroise", "Léa"]: 3
 }
 
-if __name__ == "__main__":
-    print(dictionnaire_ages.values())
+print(dictionnaire_ages.values())
 ```
 
-**Exercices :**
+**Remarques :**
 
-1. Identifiez et corrigez les problèmes dans le dictionnaire `dictionnaire_ages`.
-   ```python
-   # Indice 1: Rappelez-vous que les clés de dictionnaire doivent être de types immuables.
-   # Indice 2: Les clés doivent être uniques dans un dictionnaire.
-   ```
+1. Les clés de dictionnaire doivent être de types immuables.
+2. Les clés doivent être uniques dans un dictionnaire.
 
-**Réponses des exercices :**
+**Apprentissage à réténir :**
+
+Vous pouvez par contre utiliser une tuple en guise de clef (ou label) puisque cette dernière est immutable et nous pouvons en gerantir l'unicité.
 
 1. 
    ```python
-   dictionnaire_ages = {
-       "Alice": 21,
-       "Bob": 39,
-       "Georges": 30,
-       "Susanne": 27,
-       "Robert": 19,
-       ("Ashley", "Alex", "Nancy"): 35
-   }
-   print(dictionnaire_ages.values())
+    dictionnaire_ages = {
+        "Martino": 40,
+        "Chloé": 27,
+        "Aude": 28,
+        "Julie": 22,
+        "Pierre-Yves": 63,
+        ("Ambroise", "Léa"): 3
+    }
    ```
    **Sortie :**
    ``` 
-   dict_values([21, 39, 30, 27, 19, 35])
+   dict_values([21, 19, 30, 27, 35])
    ```
 
 **Résumé des compétences acquises :**
@@ -415,6 +422,10 @@ if __name__ == "__main__":
 - Comprendre les contraintes relatives aux clés des dictionnaires.
 - Savoir comment utiliser des types immuables comme clés de dictionnaire.
 - Reconnaître l'importance d'avoir des clés uniques dans un dictionnaire.
+
+---
+
+Sure, let's change the examples to revolve around favorite vinyl discs. 
 
 ---
 
@@ -427,30 +438,30 @@ Le mot-clé `in` est utilisé pour vérifier si une liste, un dictionnaire ou un
 **Exemples :**
 
 ```python
-liste_courses = ["poisson", "tomate", "pommes"]   # Création d'une nouvelle liste
+vinyles_favoris = ["Dark Side of the Moon", "Abbey Road", "Thriller"]   # Création d'une nouvelle liste
 
-print("tomate" in liste_courses)    # Vérifiez que liste_courses contient l'élément "tomate"
+print("Abbey Road" in vinyles_favoris)    # Vérifiez que vinyles_favoris contient l'élément "Abbey Road"
 
-dictionnaire_courses = {"poisson": 1, "tomate": 6, "pommes": 3}   # Création d'un nouveau dictionnaire
+dictionnaire_vinyles = {"Pink Floyd": "Dark Side of the Moon", "The Beatles": "Abbey Road", "Michael Jackson": "Thriller"}   # Création d'un nouveau dictionnaire
 
-print(6 in dictionnaire_courses.values())
-print("basilic" in dictionnaire_courses.keys())
+print("Dark Side of the Moon" in dictionnaire_vinyles.values())
+print("Queen" in dictionnaire_vinyles.keys())
 ```
 
 **Exercices :**
 
-1. Vérifiez si `dictionnaire_courses` contient le numéro 6 comme valeur.
-2. Vérifiez si le dictionnaire contient la clé "basilic".
+1. Vérifiez si nos avons le disque "Dark Side of the Moon" dans notre discotèque.
+2. Vérifiez si nous avons un disque du groupe "Queen" dans notre discotèque.
    ```python
    # Indice 1: Utilisez le mot-clé 'in'.
-   # Indice 2: Utilisez les attributs .values() et .keys().
+   # Indice 2: Conbinez le mot clef précédent avec les méthodes .values() et .keys().
    ```
 
 **Réponses des exercices :**
 
 1. 
    ```python
-   print(6 in dictionnaire_courses.values())
+   print("Dark Side of the Moon" in dictionnaire_vinyles.values())
    ```
    **Sortie :**
    ``` 
@@ -459,7 +470,7 @@ print("basilic" in dictionnaire_courses.keys())
 
 2. 
    ```python
-   print("basilic" in dictionnaire_courses.keys())
+   print("Queen" in dictionnaire_vinyles.keys())
    ```
    **Sortie :**
    ``` 
