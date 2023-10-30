@@ -82,44 +82,53 @@ print(count)
 
 ### 3. Boucles imbriquées
 
+Je m'excuse pour l'erreur. Voici la correction en utilisant la structure Markdown que vous aviez fournie :
+
+---
+
 **Explication**:
-Une boucle imbriquée est une boucle à l'intérieur d'une autre boucle. La boucle intérieure est exécutée une fois pour chaque itération de la boucle extérieure.
+Les boucles imbriquées en Python permettent d'exécuter une boucle à l'intérieur d'une autre boucle. La boucle intérieure sera exécutée dans son intégralité à chaque itération de la boucle extérieure. Cette structure est souvent utilisée pour parcourir des matrices, des tableaux à deux dimensions, ou pour générer des combinaisons à partir de plusieurs listes.
 
 **Exemples**:
 ```python
-adjectifs = ["noir", "élégant", "cher"]
-vetements = ["veste", "chemise", "bottes"]
+# Utilisation de boucles imbriquées pour combiner des personnes et des qualités
+personnes = ["Alice", "Bob", "Charlie"]
+qualites = ["gentil", "drôle", "intelligent"]
 
-for adj in adjectifs:
-    for vet in vetements:
-        print(adj, vet)
+for personne in personnes:
+    for qualite in qualites:
+        print(f"{personne} est {qualite}")
 ```
 
 **Exercices**:
-1. Vous avez une grille de morpion de 3x3. Votre tâche est d'imprimer chaque position. Les coordonnées le long de chaque côté sont stockées dans la liste `coordinates`. 
+1. Imaginez que vous ayez un coffre-fort avec une combinaison de 2 chiffres, allant de 1 à 5. Votre tâche est de générer toutes les combinaisons possibles pour ouvrir le coffre-fort.
 ```python
-coordinates = [1, 2, 3]
-# Indice: Utilisez une boucle for imbriquée pour parcourir chaque combinaison de coordonnées.
+chiffres = [1, 2, 3, 4, 5]
+# Indice: Utilisez une boucle for imbriquée pour parcourir chaque combinaison possible des chiffres.
 ```
 
 **Réponses**:
 ```python
-for coordinate1 in coordinates:
-    for coordinate2 in coordinates:
-        print(f'{coordinate1} x {coordinate2}')
+# Solution pour l'exercice 1
+for premier_chiffre in chiffres:
+    for second_chiffre in chiffres:
+        print(f'{premier_chiffre}{second_chiffre}')
 ```
 
 **Résultat**:
 ```
-1 x 1
-1 x 2
+11
+12
+13
 ...
-3 x 3
+54
+55
 ```
 
 **Résumé**:
-- Vous pouvez imbriquer une boucle à l'intérieur d'une autre boucle.
-- La boucle intérieure s'exécute entièrement pour chaque itération de la boucle extérieure.
+- Les boucles imbriquées permettent d'exécuter une boucle à l'intérieur d'une autre.
+- Elles sont utiles pour générer des combinaisons à partir de plusieurs listes ou parcourir des structures de données à plusieurs dimensions.
+- La boucle intérieure s'exécute complètement pour chaque itération de la boucle extérieure.
 
 ---
 
@@ -160,7 +169,7 @@ print(squares)
 ### 5. Compréhension de liste imbriquée
 
 **Explication**:
-Les compréhensions de liste imbriquées sont simplement des compréhensions de liste imbriquées dans d'autres compréhensions de liste. Cela ressemble beaucoup aux boucles imbriquées.
+Les compréhensions de liste imbriquées sont simplement des compréhensions de liste imbriquées dans d'autres compréhensions de liste. Cela ressemble beaucoup aux boucles imbriquées. En fonctions de vos declarations, il est possible de générer des liste à plusieurs dimensions. Vous pouvez embriquer les compréhensions pour générer des valeurs complèxes ou pour générer des valeurs multidimensionnel, voir les deux.  
 
 **Exemples**:
 ```python
@@ -169,25 +178,25 @@ print(matrix)
 ```
 
 **Exercices**:
-1. Créez une matrice 3x3 où chaque ligne contient les nombres de 1 à 3.
+1. Créez une liste des combinaisons du exercise du coffre fort en utilisant des compréhensions de liste embriquées.
 ```python
 # Indice: Utilisez une compréhension de liste imbriquée pour obtenir le résultat souhaité.
 ```
 
 **Réponses**:
 ```python
-matrix = [[j for j in range(1, 4)] for i in range(3)]
-print(matrix)
+combinaisons = [f'{chiffre1}{chiffre2}' for chiffre1 in range(1,6) for chiffre2 in range(1,6)]
+print(combinaisons)
 ```
 
 **Résultat**:
 ```
-[[1, 2, 3], [1, 2, 3], [1, 2, 3]]
+['11', '12', '13', '14', '15', '21', '22', '23', '24', '25', '31', '32', '33', '34', '35', '41', '42', '43', '44', '45', '51', '52', '53', '54', '55']
 ```
 
 **Résumé**:
 - Vous pouvez utiliser des compréhensions de liste imbriquées pour créer des structures de données plus complexes.
-- C'est une manière concise de créer des matrices ou d'autres structures de données bidimensionnelles.
+- C'est une manière concise de créer des matrices ou d'autres structures de données bidimensionnelles ou monodimensionnelle complèxes.
 
 ---
 
