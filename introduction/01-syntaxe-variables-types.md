@@ -469,3 +469,211 @@ trois est égal à trois : True
 - Les opérateurs de comparaison sont utilisés pour comparer les valeurs de deux objets.
 - Ces opérateurs renvoient un booléen : soit True, soit False.
 - Les comparaisons sont essentielles pour prendre des décisions dans les programmes.
+
+### 12. Opérateurs Booléens
+
+**Explication**:
+Les opérateurs booléens permettent de comparer des déclarations et de renvoyer des résultats sous forme de valeurs booléennes. L'opérateur `and` renvoie `True` lorsque les deux expressions de part et d'autre de `and` sont vraies. L'opérateur `or` renvoie `True` lorsqu'au moins une des expressions de part et d'autre de `or` est vraie. L'opérateur `not` inverse l'expression booléenne qu'il précède.
+
+**Exemples**:
+```python
+prenom = "Pierre"
+age = 18
+
+print(prenom == "Pierre" or prenom == "Paul")  # Vérifie si prenom est "Pierre" ou "Paul"
+
+print(prenom == "Pierre" and age >= 16)
+```
+
+**Exercices**:
+1. Écrivez une expression qui évalue à `True` si `prenom` est égal à "Pierre" et qu'il a 16 ans ou plus.
+```python
+# Indice: Utilisez le mot-clé 'and' et l'opérateur '>='.
+```
+
+**Réponses**:
+```python
+# Réponse pour l'exercice 1
+prenom == "Pierre" and age >= 16
+```
+
+**Résultat**:
+```
+True
+```
+
+**Pour aller plus loin**:
+Outre les opérateurs booléens de base (`and`, `or`, `not`), il existe d'autres opérateurs logiques que vous pouvez rencontrer ou que vous pourriez vouloir utiliser pour certaines logiques spécifiques. Cependant, il est à noter que Python n'inclut pas directement des opérateurs comme `xor`, `xnor`, etc. Nous devons les construire en utilisant les opérateurs de base.
+
+**Exemples**:
+```python
+prenom = "Pierre"
+age = 18
+
+# Opérateur NOT
+print(not prenom == "Pierre")
+
+# Opérateur XOR (ou exclusif)
+print((prenom == "Pierre" and not prenom == "Paul") or (not prenom == "Pierre" and prenom == "Paul"))
+
+# Opérateur XNOR
+print(not ((prenom == "Pierre" and not prenom == "Paul") or (not prenom == "Pierre" and prenom == "Paul")))
+
+# Opérateur NOX (négation du ou exclusif)
+print(not ((prenom == "Pierre" or prenom == "Paul") and not (prenom == "Pierre" and prenom == "Paul")))
+
+# Implication SI-ALORS (A implique B)
+A, B = prenom == "Pierre", age >= 16
+print(not A or B)
+
+# Implication ALORS-SI (B implique A)
+print(not B or A)
+```
+
+
+**Résumé**:
+- Les opérateurs booléens permettent d'évaluer des conditions et de renvoyer des résultats sous forme de valeurs booléennes.
+- Les opérateurs logiques permettent de construire des expressions conditionnelles complexes.
+- Les opérateurs `and`, `or` et `not` sont les principaux opérateurs booléens en Python.
+- Certains opérateurs comme XOR et XNOR doivent être construits en utilisant des opérateurs de base en Python.
+- L'implication est un concept important en logique qui peut être construit en utilisant les opérateurs de base.
+
+---
+
+### 13. Ordre des opérateurs Booléens
+
+**Explication**:
+Les opérateurs booléens ne sont pas évalués de gauche à droite. Il y a un ordre d'opérations pour les opérateurs booléens : `not` est évalué en premier, `and` est évalué ensuite et `or` est évalué en dernier.
+
+**Exemples**:
+```python
+prenom = "Pierre"
+age = 18
+
+print(prenom == "Pierre" or not age > 18)
+
+print(prenom == "Pierre" and not age == 19)
+
+print(prenom == "Pierre" or (age >= 16 and age < 25))
+```
+
+**Exercices**:
+1. Écrivez une expression qui évalue à `True` si `prenom` est "Pierre" ou "Paul", et qu'il a entre 16 et 24 ans inclus.
+```python
+# Indice: Combinez les mots-clés 'and' et 'or'.
+```
+
+**Réponses**:
+```python
+# Réponse pour l'exercice 1
+(prenom == "Pierre" or prenom == "Paul") and (age >= 16 and age <= 24)
+```
+
+**Résultat**:
+```
+True
+```
+
+**Résumé**:
+- Les opérateurs booléens ont un ordre d'évaluation spécifique.
+- Il est important de comprendre cet ordre pour écrire des expressions booléennes correctes.
+
+---
+
+### 14. Instruction If
+
+**Explication**:
+L'instruction `if` est probablement la plus connue des instructions composées en Python. Elle permet d'exécuter certains codes après avoir vérifié si son expression est vraie. En Python, l'indentation est utilisée pour définir des blocs de code.
+
+**Exemples**:
+```python
+prenom = "Pierre"
+age = 18
+
+if prenom == "Pierre" or age == 18:
+    print("Le prénom est Pierre")
+    print("Pierre a 18 ans")
+```
+
+**Résumé**:
+- L'instruction `if` permet d'exécuter un bloc de code si une condition est vraie.
+- En Python, l'indentation est cruciale pour définir les blocs de code.
+
+---
+
+### 15. Instructions Else et Elif
+
+**Explication**:
+Les instructions `elif` et `else` complètent l'instruction `if`. Il peut y avoir zéro ou plusieurs parties `elif`, et la partie `else` est facultative. L'instruction `elif` est un raccourci pour "else if".
+
+**Exemples**:
+```python
+x = 28
+
+if x < 0:
+    print('x est négatif')
+elif x == 0:
+    print('x est zéro')
+else:
+    print('x est positif')
+
+prenom = "Pierre"
+```
+
+**Exercices**:
+1. Vérifiez si le `prenom` est égal à "Pierre". Si c'est le cas, affichez `True`. Sinon, affichez `False`.
+```python
+# Indice 1: Utilisez le mot-clé 'if' et l'opérateur '=='.
+# Indice 2: Utilisez le mot-clé 'else'.
+```
+
+**Réponses**:
+```python
+# Réponse pour l'exercice 1
+if prenom == "Pierre":
+    print(True)
+else:
+    print(False)
+```
+
+**Résultat**:
+```
+True
+```
+
+**Résumé**:
+- Les instructions `elif` et `else` sont utilisées avec l'instruction `if` pour créer des conditions plus complexes.
+- `elif` permet d'ajouter des conditions supplémentaires après un `if`.
+- `else` s'exécute si aucune des conditions précédentes n'est vraie.
+
+---
+
+### 16. Instruction If-Else sur une ligne
+
+**Explication**:
+En Python, il est possible d'écrire une simple instruction if-else sur une seule ligne.
+
+**Exemples**:
+```python
+from random import random
+
+mon_nombre_aleatoire = random() * 100
+```
+
+**Exercices**:
+1. Réécrivez l'instruction if-else du code ci-dessus sur une seule ligne, mais assurez-vous que les résultats de son exécution restent exactement les mêmes.
+
+**Réponses**:
+```python
+# Réponse pour l'exercice 1
+print(mon_nombre_aleatoire if mon_nombre_aleatoire > 50 else "Trop petit!")
+```
+
+**Résultat**:
+```
+# La sortie variera en fonction du nombre généré. Soit un nombre supérieur à 50, soit "Trop petit!".
+```
+
+**Résumé**:
+- Les instructions if-else peuvent être écrites sur une seule ligne pour des conditions simples.
+- Cette syntaxe permet de rendre le code plus concis dans certains cas.
