@@ -1,1 +1,1 @@
-# bbs-tutorial-python
+# tutorial-python
