@@ -346,3 +346,163 @@ Le tri rapide a une complexité temporelle moyenne de \( O(n \log n) \), grâce 
 #### Conclusion
 Vous avez maintenant une compréhension pratique des algorithmes de tri les plus courants et de leur implémentation en Python. En comprenant comment et pourquoi ces algorithmes fonctionnent, vous serez mieux équipé pour choisir le bon algorithme de tri pour vos besoins de programmation et pour en écrire de nouveaux plus efficaces pour des cas spécifiques.
 En considérant à la fois la complexité temporelle et spatiale, vous pouvez choisir l'algorithme de tri le plus approprié à votre situation. Par exemple, si la mémoire est une contrainte, un tri en place comme le tri par insertion peut être préférable, tandis que pour les grandes listes non triées, un tri fusion ou rapide sera généralement plus efficace. Comprendre ces complexités est essentiel pour l'optimisation des performances de vos programmes.
+
+### Leçon 5: Structures de données en Python
+
+---
+
+#### Objectifs de la Leçon :
+À la fin de cette leçon, vous serez en mesure de :
+- Comprendre et utiliser les piles et les files en Python.
+- Implémenter et manipuler des listes chaînées.
+- Découvrir et travailler avec des arbres et des tas.
+- Utiliser les tableaux et les dictionnaires pour stocker et accéder aux données efficacement.
+
+À la fin de cette leçon, vous comprendrez les structures de données de base en Python, y compris les piles, les files, les listes chaînées, les arbres et les dictionnaires. Vous serez capable d'implémenter ces structures, comprendrez leurs complexités temporelles et spatiales, et saurez quand les utiliser ou les éviter.
+
+**Introduction**
+Les structures de données sont des moyens systématiques d'organiser et de stocker des données afin de les rendre accessibles et modifiables efficacement. En Python, certaines structures de données sont intégrées, comme les listes et les dictionnaires, tandis que d'autres peuvent nécessiter des implémentations plus détaillées, comme les listes chaînées et les arbres.
+
+---
+
+#### Piles (Stacks)
+Une pile est une structure de données de type LIFO (Last In, First Out), où le dernier élément ajouté est le premier à être retiré.
+
+##### Implémentation d'une pile en Python :
+Vous allez utiliser une liste pour créer une pile. Vous utiliserez la méthode `.append()` pour "empiler" un élément et la méthode `.pop()` pour "dépiler" l'élément du dessus de la pile.
+
+```python
+stack = []
+
+# Empiler des éléments
+stack.append('A')
+stack.append('B')
+stack.append('C')
+
+print(stack)  # Affiche ['A', 'B', 'C']
+
+# Dépiler un élément
+top_element = stack.pop()
+print(top_element)  # Affiche 'C'
+print(stack)  # Affiche ['A', 'B']
+```
+**Complexité :**
+- Temporelle : O(1) pour l'ajout et la suppression d'éléments (opérations push et pop).
+- Spatiale : O(n) où n est le nombre d'éléments dans la pile.
+
+**Cas d'usage :** Piles d'exécution des appels de fonctions, évaluation d'expressions (comme dans les calculatrices), parcours de graphe (DFS).
+
+**À utiliser :** Quand vous avez besoin d'un accès rapide au dernier élément inséré.
+
+**À éviter :** Lorsque vous avez besoin d'accéder à des éléments au milieu de la collection.
+
+#### Files (Queues)
+Une file est une structure de données de type FIFO (First In, First Out), où le premier élément ajouté est le premier à être retiré.
+
+##### Implémentation d'une file en Python :
+Pour implémenter une file, vous pouvez utiliser `collections.deque` car il est optimisé pour des opérations rapides de file.
+
+```python
+from collections import deque
+
+queue = deque()
+
+# Enfiler des éléments
+queue.append('A')
+queue.append('B')
+queue.append('C')
+
+print(queue)  # Affiche deque(['A', 'B', 'C'])
+
+# Défiler un élément
+first_element = queue.popleft()
+print(first_element)  # Affiche 'A'
+print(queue)  # Affiche deque(['B', 'C'])
+```
+**Complexité :**
+- Temporelle : O(1) pour l'insertion et la suppression (enfiler et défiler).
+- Spatiale : O(n) où n est le nombre d'éléments dans la file.
+
+**Cas d'usage :** Mise en file d'attente des processus, parcours de graphe (BFS), gestion des buffers dans les flux de données.
+
+**À utiliser :** Lorsque l'ordre d'arrivée des éléments doit être préservé.
+
+**À éviter :** Si les accès fréquents aux éléments autres que le premier sont nécessaires.
+
+#### Listes chaînées (Linked Lists)
+Une liste chaînée est une séquence d'éléments où chaque élément est connecté au suivant par un "lien".
+
+##### Implémentation d'une liste chaînée en Python :
+Vous apprendrez à créer des nœuds et à les lier ensemble pour former une liste chaînée.
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Création des nœuds
+node1 = Node('A')
+node2 = Node('B')
+node3 = Node('C')
+
+# Connexion des nœuds
+node1.next = node2
+node2.next = node3
+
+# Parcourir la liste chaînée
+current_node = node1
+while current_node:
+    print(current_node.data)
+    current_node = current_node.next
+```
+**Complexité :**
+- Temporelle : O(1) pour l'insertion et la suppression aux extrémités (dans le cas d'une liste doublement chaînée), O(n) pour l'accès à un élément.
+- Spatiale : O(n) où n est le nombre d'éléments de la liste.
+
+**Cas d'usage :** Quand les insertions et les suppressions fréquentes sont nécessaires, en particulier si elles se font à l'une ou l'autre des extrémités de la liste.
+
+**À utiliser :** Lorsque le coût de redimensionnement d'un tableau est prohibitif.
+
+**À éviter :** Lorsque des accès rapides et fréquents aux éléments par index sont nécessaires.
+
+#### Arbres et Tas (Trees and Heaps)
+Les arbres sont des structures de données non linéaires qui simulent une hiérarchie avec des éléments appelés nœuds. Un tas est un type spécial d'arbre binaire.
+
+##### Implémentation d'un arbre en Python :
+Dans cette partie de la leçon, vous apprendrez comment représenter un arbre et effectuer des opérations de base comme l'insertion et le parcours.
+
+```python
+# Cette partie sera élaborée avec des exemples et des exercices.
+```
+
+#### Tableaux et Dictionnaires (Arrays and Dictionaries)
+Les tableaux en Python sont fournis sous forme de listes. Les dictionnaires sont des tableaux associatifs, où chaque valeur est associée à une clé unique.
+
+##### Utilisation des dictionnaires en Python :
+Vous utiliserez des dictionnaires pour stocker et accéder aux données
+
+via des clés.
+
+```python
+# Création d'un dictionnaire
+mon_dictionnaire = {'cle1': 'valeur1', 'cle2': 'valeur2'}
+
+# Accéder à une valeur
+print(mon_dictionnaire['cle1'])  # Affiche 'valeur1'
+
+# Ajouter ou modifier une valeur
+mon_dictionnaire['cle3'] = 'valeur3'
+```
+**Complexité :**
+- Temporelle : Varie selon les opérations et le type d'arbre. Par exemple, l'ajout et la suppression dans un tas ont une complexité de O(log n).
+- Spatiale : O(n) pour les deux, où n est le nombre d'éléments.
+
+**Cas d'usage :** Les arbres sont utilisés dans de nombreux algorithmes de recherche et de tri. Les tas sont utilisés pour gérer les files de priorité, pour le tri par tas et dans des algorithmes de graphe.
+
+**À utiliser :** Quand vous avez besoin de structures avec des relations parent-enfant, comme des systèmes de fichiers ou des opérations de tri et de recherche efficaces.
+
+**À éviter :** Si la structure de données peut rester plate sans relations hiérarchiques, car les opérations sur les arbres peuvent être plus complexes
+
+#### Conclusion et Exercices
+À la fin de cette leçon, vous aurez une solide compréhension des structures de données de base et de leur importance dans les algorithmes.
