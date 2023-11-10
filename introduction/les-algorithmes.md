@@ -1,4 +1,4 @@
-### Leçon 1: Introduction à l'Algorithmique en Python
+## Leçon 1: Introduction à l'Algorithmique en Python
 
 #### Introduction théorique
 
@@ -102,7 +102,7 @@ La pensée algorithmique permet de résoudre des problèmes de manière structur
 **Introduction à ce qui va suivre dans la prochaine leçon**
 Dans la leçon suivante, nous aborderons la complexité algorithmique, un concept clé pour évaluer et comparer l'efficacité des algorithmes.
 
-### Leçon 2: Complexité algorithmique
+## Leçon 2: Complexité algorithmique
 
 **Objectifs de la Leçon:**
 - Comprendre la notion de complexité temporelle et spatiale.
@@ -192,7 +192,7 @@ La recherche linéaire est simple à implémenter et fonctionne bien avec des li
 
 Très bien, je vais rédiger la leçon détaillée sur les algorithmes de tri pour une classe d'étudiants en Python. Cette leçon portera sur le Tri par sélection, le Tri par insertion, le Tri à bulles, le Tri fusion et le Tri rapide.
 
-### Leçon 4: Algorithmes de tri
+## Leçon 4: Algorithmes de tri
 
 #### Objectifs de la leçon
 À la fin de cette leçon, vous serez capable de :
@@ -347,7 +347,7 @@ Le tri rapide a une complexité temporelle moyenne de \( O(n \log n) \), grâce 
 Vous avez maintenant une compréhension pratique des algorithmes de tri les plus courants et de leur implémentation en Python. En comprenant comment et pourquoi ces algorithmes fonctionnent, vous serez mieux équipé pour choisir le bon algorithme de tri pour vos besoins de programmation et pour en écrire de nouveaux plus efficaces pour des cas spécifiques.
 En considérant à la fois la complexité temporelle et spatiale, vous pouvez choisir l'algorithme de tri le plus approprié à votre situation. Par exemple, si la mémoire est une contrainte, un tri en place comme le tri par insertion peut être préférable, tandis que pour les grandes listes non triées, un tri fusion ou rapide sera généralement plus efficace. Comprendre ces complexités est essentiel pour l'optimisation des performances de vos programmes.
 
-### Leçon 5: Structures de données en Python
+## Leçon 5: Structures de données en Python
 
 ---
 
@@ -509,7 +509,7 @@ mon_dictionnaire['cle3'] = 'valeur3'
 
 Très bien, je vais préparer une ébauche détaillée pour la leçon 8, qui porte sur les algorithmes de type "diviser pour régner". Cette leçon introduira les étudiants aux principes de ces algorithmes et inclura des exemples pratiques de leur mise en œuvre en Python.
 
-### Leçon 6: Algorithmes "Diviser pour Régner"
+## Leçon 6: Algorithmes "Diviser pour Régner"
 
 #### Objectifs de la leçon
 À la fin de cette leçon, vous serez capable de :
