@@ -1,6 +1,6 @@
 ## Leçon 1: Introduction à l'Algorithmique en Python
 
-#### Introduction théorique
+### Introduction théorique
 
 **Définition d'un algorithme**
 Un algorithme est une série d'instructions ordonnées et finies qui, lorsqu'elles sont suivies, mènent à la résolution d'un problème donné. En informatique, les algorithmes sont au cœur de la programmation, permettant de créer des solutions systématiques et efficaces à des problèmes complexes.
@@ -11,7 +11,7 @@ Le terme "algorithme" tire son origine du nom du mathématicien du 9ème siècle
 **Algorithmes dans la vie quotidienne**
 Les algorithmes ne se limitent pas à l'informatique. Ils sont partout autour de nous : dans les recettes de cuisine, les itinéraires routiers, ou encore les instructions pour assembler des meubles.
 
-#### Algorithmes vs Fonctions en Python
+### Algorithmes vs Fonctions en Python
 
 **Rappel sur les fonctions en Python**
 Les fonctions sont des blocs de code conçus pour effectuer une tâche spécifique et peuvent être réutilisés dans le programme.
@@ -19,7 +19,7 @@ Les fonctions sont des blocs de code conçus pour effectuer une tâche spécifiq
 **Comparaison avec les algorithmes**
 Contrairement aux fonctions, qui sont des constructions du langage de programmation, les algorithmes sont des concepts indépendants du langage utilisé. Ils peuvent être implémentés dans n'importe quel langage de programmation, y compris Python.
 
-#### Pensée algorithmique
+### Pensée algorithmique
 
 **Analyser un problème**
 La première étape pour concevoir un algorithme est de comprendre clairement le problème. Cela implique de définir de façon précise ce qui est demandé, quelles sont les entrées disponibles, et quelle doit être la sortie.
@@ -30,7 +30,7 @@ Une fois le problème analysé, il convient de le découper en petites étapes. 
 **Identifier les entrées et les sorties**
 Les entrées sont les données sur lesquelles l'algorithme va travailler, et les sorties sont les résultats de l'opération algorithmique.
 
-#### Exemple introductif en Python
+### Exemple introductif en Python
 
 **Présentation de l'exemple**
 Nous allons écrire un algorithme pour calculer la moyenne d'une liste de nombres.
@@ -91,7 +91,7 @@ Concevoir un algorithme qui détermine si une liste donnée de nombres est trié
 
 Pour chaque exercice, posez votre pensées avant de implémenter la solution de l'algorithme en Python.
 
-#### Debrief
+### Debrief
 
 **Résumé de ce qui a été appris**
 Nous avons introduit la notion d'algorithme, la pensée algorithmique et comment distinguer un algorithme d'une simple fonction. Nous avons également mis en pratique ces concepts à travers des exercices en Python.
@@ -102,20 +102,20 @@ La pensée algorithmique permet de résoudre des problèmes de manière structur
 **Introduction à ce qui va suivre dans la prochaine leçon**
 Dans la leçon suivante, nous aborderons la complexité algorithmique, un concept clé pour évaluer et comparer l'efficacité des algorithmes.
 
+---
 ## Leçon 2: Complexité algorithmique
 
-**Objectifs de la Leçon:**
+### Objectifs de la Leçon
 - Comprendre la notion de complexité temporelle et spatiale.
 - Apprendre à utiliser la notation Big O pour décrire la complexité des algorithmes.
 - Analyser la complexité de quelques structures de contrôle de base et algorithmes simples en Python.
 
-**Contenu de la Leçon:**
-
 **Introduction à la Complexité Algorithmique**
 La complexité algorithmique est un concept fondamental en informatique qui mesure l'efficacité des algorithmes en termes de temps d'exécution et d'espace mémoire utilisé. Comprendre cette notion est essentiel pour écrire des programmes performants et efficaces.  
+
 Lorsque vous écrivez un programme, il est essentiel de réfléchir non seulement à obtenir la bonne réponse mais aussi à la vitesse à laquelle votre algorithme trouve cette réponse et à la quantité de mémoire qu'il utilise. C'est là que la complexité algorithmique entre en jeu. La *complexité temporelle* se rapporte au temps qu'il faut pour exécuter un algorithme, tandis que la *complexité spatiale* concerne l'espace mémoire nécessaire.
 
-**Notation Big O**
+### Notation Big O**
 La notation Big O est une manière mathématique de décrire combien de temps ou d'espace un algorithme nécessite par rapport à la taille de l'entrée. Vous allez rencontrer des expressions comme \( O(1) \), \( O(n) \), \( O(n^2) \), \( O(\log n) \), et \( O(n \log n) \), chacune représentant un ordre de grandeur différent pour le temps ou l'espace requis.  
 Elle permet d'exprimer le temps d'exécution ou l'espace mémoire (O) (aka: _output time/space_) requis par un algorithme en fonction de la taille de l'entrée (n).
 
@@ -128,13 +128,14 @@ Elle permet d'exprimer le temps d'exécution ou l'espace mémoire (O) (aka: _out
 **Analyse de la Complexité de Quelques Algorithmes Simples**
 Vous commencerez par analyser la complexité de fonctions Python de base. Par exemple, une simple boucle `for` parcourant une liste de n éléments a une complexité temporelle de \( O(n) \). Mais si vous avez deux boucles `for` imbriquées, chacune parcourant la liste, la complexité devient \( O(n^2) \).
 
-**Exercices Pratiques**
+### Exercices Pratiques
 1. Écrivez une fonction qui compte le nombre d'éléments distincts dans une liste et analysez sa complexité temporelle.
 2. Comparez la complexité spatiale d'une implémentation utilisant un tableau (liste en Python) et une implémentation utilisant un ensemble (set en Python).
 
 **Pour Aller Plus Loin:**
 Essayez d'optimiser une fonction que vous avez écrite précédemment en réduisant sa complexité temporelle ou spatiale. Discutez des stratégies que vous avez utilisées pour l'optimisation.
 
+---
 ## Leçon 3: Algorithmes de recherche
 
 ### Objectifs de la leçon
@@ -177,12 +178,12 @@ def recherche_binaire(liste, valeur):
     return -1
 ```
 
-#### Exercice
+### Exercice
 Testez cette fonction avec une liste triée et différentes valeurs à rechercher. Comparez le nombre d'itérations nécessaires pour trouver un élément avec la recherche linéaire versus la recherche binaire.
 
 ### Application Pratique et Comparaison d'efficacité
 Maintenant que vous avez vu et utilisé les deux algorithmes, vous allez utiliser les deux méthodes de recherche pour trouver des éléments dans des listes de différentes tailles. Mesurez le temps d'exécution pour chaque méthode et analysez les résultats puis réfléchissez aux questions suivantes :
-- Quelle méthode est la plus rapide ? 
+- Quelle méthode est la plus rapide ?
 - Dans quelles circonstances ?
 - Dans quelles situations utiliseriez-vous la recherche linéaire plutôt que la recherche binaire ?
 - Quelle est l'importance de la taille de la liste pour chacun de ces algorithmes ?
@@ -192,9 +193,10 @@ La recherche linéaire est simple à implémenter et fonctionne bien avec des li
 
 Très bien, je vais rédiger la leçon détaillée sur les algorithmes de tri pour une classe d'étudiants en Python. Cette leçon portera sur le Tri par sélection, le Tri par insertion, le Tri à bulles, le Tri fusion et le Tri rapide.
 
+---
 ## Leçon 4: Algorithmes de tri
 
-#### Objectifs de la leçon
+### Objectifs de la leçon
 À la fin de cette leçon, vous serez capable de :
 - Comprendre et implémenter le Tri par sélection, le Tri par insertion, le Tri à bulles, le Tri fusion et le Tri rapide.
 - Analyser la complexité temporelle de ces algorithmes de tri.
@@ -203,7 +205,7 @@ Très bien, je vais rédiger la leçon détaillée sur les algorithmes de tri po
 **Introduction**
 Les algorithmes de tri sont fondamentaux en informatique. Trier des données est souvent la première étape dans de nombreux processus, que ce soit pour organiser des informations, faciliter des recherches ultérieures ou optimiser des algorithmes plus complexes. Vous allez découvrir cinq algorithmes de tri classiques et nous allons les commenter concernant leur implémentation en Python.
 
-#### Tri par sélection
+### Tri par sélection
 Le tri par sélection recherche le plus petit élément de la liste et l'échange avec l'élément en première position. Il continue ensuite avec le reste de la liste non triée.
 
 **Implémentation en Python**
@@ -224,7 +226,7 @@ Le tri par sélection a une complexité temporelle de \( O(n^2) \) car il doit p
 
 **Complexité temporelle**: En moyenne \( O(n^2) \)
 
-#### Tri par insertion
+### Tri par insertion
 Le tri par insertion prend chaque élément de la liste et l'insère dans la partie déjà triée de la liste.
 
 **Implémentation en Python**
@@ -246,7 +248,7 @@ Le tri par insertion a également une complexité temporelle de \( O(n^2) \), ca
 
 **Complexité temporelle**: En moyenne \( O(n^2) \)
 
-#### Tri à bulles
+### Tri à bulles
 Le tri à bulles compare les éléments adjacents et les échange s'ils sont dans le mauvais ordre. Ce processus est répété jusqu'à ce que la liste soit triée.
 
 **Implémentation en Python**
@@ -266,7 +268,7 @@ Le tri à bulles a une complexité temporelle de \( O(n^2) \) en raison des deux
 
 **Complexité temporelle**: En moyenne \( O(n^2) \)
 
-#### Tri fusion
+### Tri fusion
 Le tri fusion divise la liste en deux moitiés, trie chacune d'elles et fusionne les deux listes triées.
 
 **Implémentation en Python**
@@ -309,7 +311,7 @@ Le tri fusion est plus rapide avec une complexité temporelle de \( O(n \log n) 
 
 **Complexité temporelle**: \( O(n \log n) \)
 
-#### Tri rapide
+### Tri rapide
 Le tri rapide choisit un élément comme pivot et partitionne les éléments autour du pivot, en plaçant les éléments plus petits à gauche et les plus grands à droite. Il trie ensuite récursivement les sous-listes.
 
 **Implémentation en Python**
@@ -333,7 +335,7 @@ Le tri rapide a une complexité temporelle moyenne de \( O(n \log n) \), grâce 
 
 **Complexité temporelle**: En moyenne \( O(n \log n) \), mais \( O(n^2) \) dans le pire des cas.
 
-#### Explications sur les Complexités
+### Explications sur les Complexités
 - **Tri par sélection, insertion et à bulles**: Ces algorithmes ont tous une complexité temporelle quadratique car ils comparent des éléments dans des boucles imbriquées. Ils sont efficaces sur de petites listes ou des listes presque triées mais deviennent inefficaces pour les grandes listes.
 - **Tri fusion**: C'est un bon algorithme pour les grandes données en raison de sa complexité temporelle stable \( O(n \log n) \), mais il nécessite plus de mémoire, ce qui peut être un inconvénient pour les très grandes listes.
 - **Tri rapide**: C'est souvent l'algorithme de tri le plus rapide en pratique. Cependant, son efficacité dépend fortement du choix du pivot. Des stratégies comme choisir un pivot aléatoire ou médian peuvent aider à éviter le pire des cas.
@@ -343,15 +345,14 @@ Le tri rapide a une complexité temporelle moyenne de \( O(n \log n) \), grâce 
 2. Utilisez le tri par insertion et comparez son temps d'exécution avec le tri par sélection sur des listes de différentes tailles.
 4. Analysez la complexité temporelle du tri à bulles avec différentes tailles de liste et discutez de l'efficacité de l'algorithme.
 
-#### Conclusion
+### Conclusion
 Vous avez maintenant une compréhension pratique des algorithmes de tri les plus courants et de leur implémentation en Python. En comprenant comment et pourquoi ces algorithmes fonctionnent, vous serez mieux équipé pour choisir le bon algorithme de tri pour vos besoins de programmation et pour en écrire de nouveaux plus efficaces pour des cas spécifiques.
 En considérant à la fois la complexité temporelle et spatiale, vous pouvez choisir l'algorithme de tri le plus approprié à votre situation. Par exemple, si la mémoire est une contrainte, un tri en place comme le tri par insertion peut être préférable, tandis que pour les grandes listes non triées, un tri fusion ou rapide sera généralement plus efficace. Comprendre ces complexités est essentiel pour l'optimisation des performances de vos programmes.
 
+---
 ## Leçon 5: Structures de données en Python
 
----
-
-#### Objectifs de la Leçon :
+### Objectifs de la Leçon :
 À la fin de cette leçon, vous serez en mesure de :
 - Comprendre et utiliser les piles et les files en Python.
 - Implémenter et manipuler des listes chaînées.
@@ -363,12 +364,11 @@ En considérant à la fois la complexité temporelle et spatiale, vous pouvez ch
 **Introduction**
 Les structures de données sont des moyens systématiques d'organiser et de stocker des données afin de les rendre accessibles et modifiables efficacement. En Python, certaines structures de données sont intégrées, comme les listes et les dictionnaires, tandis que d'autres peuvent nécessiter des implémentations plus détaillées, comme les listes chaînées et les arbres.
 
----
 
-#### Piles (Stacks)
+### Piles (Stacks)
 Une pile est une structure de données de type LIFO (Last In, First Out), où le dernier élément ajouté est le premier à être retiré.
 
-##### Implémentation d'une pile en Python :
+#### Implémentation d'une pile en Python :
 Vous allez utiliser une liste pour créer une pile. Vous utiliserez la méthode `.append()` pour "empiler" un élément et la méthode `.pop()` pour "dépiler" l'élément du dessus de la pile.
 
 ```python
@@ -396,10 +396,10 @@ print(stack)  # Affiche ['A', 'B']
 
 **À éviter :** Lorsque vous avez besoin d'accéder à des éléments au milieu de la collection.
 
-#### Files (Queues)
+### Files (Queues)
 Une file est une structure de données de type FIFO (First In, First Out), où le premier élément ajouté est le premier à être retiré.
 
-##### Implémentation d'une file en Python :
+#### Implémentation d'une file en Python :
 Pour implémenter une file, vous pouvez utiliser `collections.deque` car il est optimisé pour des opérations rapides de file.
 
 ```python
@@ -429,10 +429,10 @@ print(queue)  # Affiche deque(['B', 'C'])
 
 **À éviter :** Si les accès fréquents aux éléments autres que le premier sont nécessaires.
 
-#### Listes chaînées (Linked Lists)
+### Listes chaînées (Linked Lists)
 Une liste chaînée est une séquence d'éléments où chaque élément est connecté au suivant par un "lien".
 
-##### Implémentation d'une liste chaînée en Python :
+#### Implémentation d'une liste chaînée en Python :
 Vous apprendrez à créer des nœuds et à les lier ensemble pour former une liste chaînée.
 
 ```python
@@ -466,20 +466,20 @@ while current_node:
 
 **À éviter :** Lorsque des accès rapides et fréquents aux éléments par index sont nécessaires.
 
-#### Arbres et Tas (Trees and Heaps)
+### Arbres et Tas (Trees and Heaps)
 Les arbres sont des structures de données non linéaires qui simulent une hiérarchie avec des éléments appelés nœuds. Un tas est un type spécial d'arbre binaire.
 
-##### Implémentation d'un arbre en Python :
+#### Implémentation d'un arbre en Python :
 Dans cette partie de la leçon, vous apprendrez comment représenter un arbre et effectuer des opérations de base comme l'insertion et le parcours.
 
 ```python
 # Cette partie sera élaborée avec des exemples et des exercices.
 ```
 
-#### Tableaux et Dictionnaires (Arrays and Dictionaries)
+### Tableaux et Dictionnaires (Arrays and Dictionaries)
 Les tableaux en Python sont fournis sous forme de listes. Les dictionnaires sont des tableaux associatifs, où chaque valeur est associée à une clé unique.
 
-##### Utilisation des dictionnaires en Python :
+#### Utilisation des dictionnaires en Python :
 Vous utiliserez des dictionnaires pour stocker et accéder aux données
 
 via des clés.
@@ -504,14 +504,15 @@ mon_dictionnaire['cle3'] = 'valeur3'
 
 **À éviter :** Si la structure de données peut rester plate sans relations hiérarchiques, car les opérations sur les arbres peuvent être plus complexes
 
-#### Conclusion
+### Conclusion
 À la fin de cette leçon, vous aurez une solide compréhension des structures de données de base et de leur importance dans les algorithmes.
 
 Très bien, je vais préparer une ébauche détaillée pour la leçon 8, qui porte sur les algorithmes de type "diviser pour régner". Cette leçon introduira les étudiants aux principes de ces algorithmes et inclura des exemples pratiques de leur mise en œuvre en Python.
 
+---
 ## Leçon 6: Algorithmes "Diviser pour Régner"
 
-#### Objectifs de la leçon
+### Objectifs de la leçon
 À la fin de cette leçon, vous serez capable de :
 - Comprendre le principe de l'approche "diviser pour régner".
 - Identifier des problèmes pouvant être résolus efficacement avec des algorithmes "diviser pour régner".
@@ -523,38 +524,39 @@ Très bien, je vais préparer une ébauche détaillée pour la leçon 8, qui por
 Le principe de "diviser pour régner" est une stratégie fondamentale en algorithmie qui consiste à diviser un problème en sous-problèmes de même nature, résoudre ces sous-problèmes, puis combiner leurs solutions pour obtenir la solution du problème original.
 
 #### Exemple conceptuel
-Pensez à un grand puzzle. Il est beaucoup plus facile de diviser le puzzle en sections, assembler chaque section individuellement et ensuite assembler les sections pour finir le puzzle, que d'essayer d'assembler le puzzle en une seule étape.  
+Pensez à un grand puzzle. Il est beaucoup plus facile de diviser le puzzle en sections, assembler chaque section individuellement et ensuite assembler les sections pour finir le puzzle, que d'essayer d'assembler le puzzle en une seule étape.
 
-Des exemples que vous avez déjà rencontré dans le cadre de cette unité:  
-#### Le Tri Fusion (Merge Sort)
+Des exemples que vous avez déjà rencontré dans le cadre de cette unité:
+##### Le Tri Fusion (Merge Sort)
 1. **Théorie** :
     - Divisez le tableau en deux moitiés égales jusqu'à ce que chaque sous-tableau contienne un seul élément.
     - Fusionnez les sous-tableaux de manière à ce qu'ils soient triés lors de la fusion.
     - Le processus de fusion est répété jusqu'à ce que nous obtenions le tableau trié final.
 
-#### Le Tri Rapide (Quick Sort)
+##### Le Tri Rapide (Quick Sort)
 1. **Théorie** :
     - Sélectionnez un élément du tableau comme pivot.
     - Réorganisez le tableau de sorte que tous les éléments inférieurs au pivot viennent avant lui, tandis que tous les éléments supérieurs viennent après.
     - Appliquez récursivement la même opération aux sous-tableaux formés par les éléments inférieurs et supérieurs au pivot.
 
-#### La Recherche Binaire
+##### La Recherche Binaire
 1. **Théorie** :
     - Le principe de la recherche binaire est de diviser continuellement de moitié le domaine de recherche jusqu'à ce que l'élément recherché soit trouvé.
     - Elle nécessite que le tableau dans lequel la recherche est effectuée soit déjà trié.
 
-#### Conclusion
+### Conclusion
 Les algorithmes "diviser pour régner" sont puissants car ils transforment des problèmes complexes en sous-problèmes plus simples et gérables, souvent en améliorant l'efficacité par rapport aux approches plus naïves.
 
-#### Pour aller plus loin
+### Pour aller plus loin
 - Réfléchissez à d'autres problèmes où vous pourriez appliquer la stratégie "diviser pour régner".
 - Essayez de modifier les algorithmes pour gérer les cas de figures spéciaux ou les optimisations.
 
+---
 ## Leçon 7 : Algorithmes de parcours
 
 Dans cette leçon, vous allez explorer les algorithmes de parcours, des outils puissants pour naviguer et rechercher des données dans des structures complexes telles que les graphes.
 
-#### Objectifs de la leçon
+### Objectifs de la leçon
 À la fin de cette leçon, vous serez capable de :
 - Comprendre et implémenter les algorithmes de parcours en largeur (BFS) et en profondeur (DFS).
 - Analyser la complexité spatiale et temporelle des algorithmes de parcours.
@@ -565,31 +567,31 @@ Dans cette leçon, vous allez explorer les algorithmes de parcours, des outils p
 **Introduction**
 Les algorithmes de parcours sont essentiels pour travailler avec des structures de données telles que les graphes. Ils permettent de rechercher des données, de trouver des chemins, de vérifier l'existence de connexions et de résoudre bien d'autres problèmes complexes. Comprendre ces algorithmes est crucial pour aborder des problèmes comme la planification de trajets, la navigation dans des réseaux, et l'exploration de données structurées.
 
-#### Exemple conceptuel
+### Exemple conceptuel
 Imaginez que vous deviez trouver un livre spécifique dans une grande bibliothèque. Une approche serait de parcourir chaque allée en inspectant chaque livre (BFS), ou vous pourriez commencer à une extrémité et explorer en profondeur allée par allée (DFS). La méthode choisie affectera l'efficacité de votre recherche en fonction de l'organisation de la bibliothèque, ce qui reflète l'importance de sélectionner l'algorithme de parcours approprié pour différentes structures de données.
 
 Les graphes sont des structures de données extrêmement puissantes et polyvalentes, car elles peuvent représenter presque toute situation où quelque chose est connecté à autre chose. Voici quelques exemples de sources de données et de jeux de données de la vie réelle qui sont souvent organisés sous forme de graphes, ainsi que des cas d'utilisation qui justifieraient l'emploi d'une approche de parcours spécifique :
 
-### Exemples de sources de données organisées en graphes :
+#### Exemples de sources de données organisées en graphes :
 
 1. **Réseaux sociaux** : Les utilisateurs sont des nœuds et les relations (amis, suivis, etc.) sont des arêtes.
-   - **Parcours en largeur (BFS)** : Idéal pour trouver des amis "à un degré de séparation" ou pour implémenter des fonctionnalités comme "les personnes que vous pourriez connaître".
-   - **Parcours en profondeur (DFS)** : Utile pour analyser des groupes de communautés fermées ou des recommandations basées sur des connexions plus profondes.
+    - **Parcours en largeur (BFS)** : Idéal pour trouver des amis "à un degré de séparation" ou pour implémenter des fonctionnalités comme "les personnes que vous pourriez connaître".
+    - **Parcours en profondeur (DFS)** : Utile pour analyser des groupes de communautés fermées ou des recommandations basées sur des connexions plus profondes.
 2. **Cartes et Navigation** : Les intersections et les adresses sont des nœuds, et les routes sont des arêtes.
-   - **Dijkstra/A*** : Utilisés pour trouver le chemin le plus court entre deux points, comme dans les applications de navigation GPS.
+    - **Dijkstra/A*** : Utilisés pour trouver le chemin le plus court entre deux points, comme dans les applications de navigation GPS.
 3. **Internet (Web)** : Les pages Web sont des nœuds et les hyperliens sont des arêtes.
-   - **BFS** : Employé par les moteurs de recherche pour le parcours du web (web crawling), où une recherche en largeur peut rapidement indexer les pages accessibles depuis un point donné.
-   - **DFS** : Utilisé pour des analyses plus profondes d'un site spécifique ou pour détecter des boucles de redirection.
+    - **BFS** : Employé par les moteurs de recherche pour le parcours du web (web crawling), où une recherche en largeur peut rapidement indexer les pages accessibles depuis un point donné.
+    - **DFS** : Utilisé pour des analyses plus profondes d'un site spécifique ou pour détecter des boucles de redirection.
 4. **Réseaux de transport public** : Les stations sont des nœuds et les lignes de transport sont des arêtes.
-   - **Dijkstra/A*** : Pour optimiser les trajets, en tenant compte des horaires et des coûts.
+    - **Dijkstra/A*** : Pour optimiser les trajets, en tenant compte des horaires et des coûts.
 5. **Biologie (Réseaux de protéines)** : Les protéines sont des nœuds et les interactions biochimiques sont des arêtes.
-   - **DFS** : Pour explorer les voies métaboliques ou les cascades de signalisation.
+    - **DFS** : Pour explorer les voies métaboliques ou les cascades de signalisation.
 6. **Systèmes de recommandation** : Les produits ou les films sont des nœuds et les préférences ou achats des utilisateurs sont des arêtes.
-   - **BFS/DFS** : Pour explorer les recommandations basées sur des éléments similaires ou des connexions d'utilisateurs.
+    - **BFS/DFS** : Pour explorer les recommandations basées sur des éléments similaires ou des connexions d'utilisateurs.
 7. **Systèmes de distribution électrique** : Les sources d'énergie sont des nœuds et les lignes de transmission sont des arêtes.
-   - **BFS** : Pour identifier les points de défaillance ou les chemins de distribution optimaux.
+    - **BFS** : Pour identifier les points de défaillance ou les chemins de distribution optimaux.
 
-### Exemple d'usages justifiant une approche de parcours :
+#### Exemple d'usages justifiant une approche de parcours :
 - **Pour des alertes rapides ou des mises à jour dans un réseau social (BFS)** : Si un utilisateur fait une mise à jour importante, BFS peut être utilisé pour propager rapidement l'information à tous ses contacts directs.
 - **Pour la planification de trajets avec multiples critères (Dijkstra/A***)** : Dans un réseau de transport, si un voyageur souhaite minimiser le temps de trajet tout en évitant les routes à péage, l'algorithme A* peut être utilisé avec une heuristique qui favorise les chemins les plus rapides sans péage.
 - **Pour le débogage de réseaux (DFS)** : Lors du débogage d'un réseau complexe, DFS peut être utilisé pour suivre un chemin de connexion particulier en profondeur pour identifier où une défaillance pourrait se produire.
@@ -1007,6 +1009,7 @@ Vous allez utiliser A* pour trouver un chemin dans un jeu de plateau où vous de
 **Conclusion de la leçon :**
 En maîtrisant ces algorithmes de parcours, vous aurez les outils pour aborder de nombreux problèmes classiques en informatique et développer des solutions efficaces pour des applications réelles.
 
+---
 ## Leçon 8: Algorithmes avancés et applications pratiques
 
 ### Objectifs de la leçon
@@ -1018,11 +1021,11 @@ En maîtrisant ces algorithmes de parcours, vous aurez les outils pour aborder d
 ### Introduction
 Dans les leçons précédentes, vous avez appris les bases des algorithmes de recherche et de tri, ainsi que des structures de données essentielles. Maintenant, vous allez découvrir des techniques algorithmiques plus avancées qui vous permettront de résoudre des problèmes plus complexes de manière efficace.
 
-#### Partie 1: Programmation dynamique
+### Partie 1: Programmation dynamique
 - **Définition et principe** : Vous apprendrez ce qu'est la programmation dynamique et comment elle peut être utilisée pour optimiser la résolution de problèmes qui peuvent être décomposés en sous-problèmes imbriqués.
 - **Exemple pratique : Le problème du sac à dos** : Nous allons comenter une solution au problème du sac à dos en utilisant la programmation dynamique pour comprendre comment les sous-problèmes sont résolus et combinés.
 
-### Exemple de Programmation Dynamique: Le Problème du Sac à dos
+#### Le Problème du Sac à dos
 
 Le problème du sac à dos est un problème d'optimisation combinatoire. Vous devez remplir un sac avec les objets ayant la plus grande valeur sans dépasser la capacité du sac. Voici un exemple d'implémentation de la programmation dynamique pour résoudre ce problème :
 
@@ -1060,11 +1063,11 @@ n = len(valeurs)
 print(sac_a_dos(capacite, poids, valeurs, n))
 ```
 
-#### Partie 2: Algorithme de Backtracking
+### Partie 2: Algorithme de Backtracking
 - **Définition et principe** : Vous découvrirez la méthode de backtracking, une technique de recherche exhaustive qui permet de résoudre des problèmes de satisfaction de contraintes.
 - **Exemple pratique : Le problème des N-Reines** : Nous allons commenter un algorithme pour placer N reines sur un échiquier de N×N sans qu'elles ne s'attaquent.
 
-### Exemple d'Algorithme de Backtracking: Le Problème des N-Reines
+#### Le Problème des N-Reines
 
 Le problème des N-Reines consiste à placer N reines sur un échiquier de taille N×N de manière à ce qu'aucune reine ne puisse s'attaquer. Voici une solution possible utilisant le backtracking :
 
@@ -1145,7 +1148,7 @@ n = 4
 solution_n_reines(n)
 ```
 
-#### Partie 3: Applications pratiques des algorithmes
+### Partie 3: Applications pratiques des algorithmes
 - **Exploration d'applications** : Vous examinerez comment les algorithmes que vous avez appris peuvent être appliqués dans des situations réelles, comme la planification de chemin dans un jeu vidéo ou la décision de flux de travail dans une usine.
 - **Exercice de groupe** : Vous travaillerez en groupes pour identifier un problème dans votre domaine d'intérêt et proposerez une solution algorithmique, en utilisant la programmation dynamique ou le backtracking.
 
