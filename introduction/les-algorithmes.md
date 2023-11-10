@@ -504,5 +504,508 @@ mon_dictionnaire['cle3'] = 'valeur3'
 
 **À éviter :** Si la structure de données peut rester plate sans relations hiérarchiques, car les opérations sur les arbres peuvent être plus complexes
 
-#### Conclusion et Exercices
+#### Conclusion
 À la fin de cette leçon, vous aurez une solide compréhension des structures de données de base et de leur importance dans les algorithmes.
+
+Très bien, je vais préparer une ébauche détaillée pour la leçon 8, qui porte sur les algorithmes de type "diviser pour régner". Cette leçon introduira les étudiants aux principes de ces algorithmes et inclura des exemples pratiques de leur mise en œuvre en Python.
+
+### Leçon 6: Algorithmes "Diviser pour Régner"
+
+#### Objectifs de la leçon
+À la fin de cette leçon, vous serez capable de :
+- Comprendre le principe de l'approche "diviser pour régner".
+- Identifier des problèmes pouvant être résolus efficacement avec des algorithmes "diviser pour régner".
+- Implémenter l'algorithme du tri fusion en Python.
+- Implémenter l'algorithme du tri rapide en Python.
+- Utiliser la recherche binaire pour trouver des éléments dans un tableau trié.
+
+**Introduction**
+Le principe de "diviser pour régner" est une stratégie fondamentale en algorithmie qui consiste à diviser un problème en sous-problèmes de même nature, résoudre ces sous-problèmes, puis combiner leurs solutions pour obtenir la solution du problème original.
+
+#### Exemple conceptuel
+Pensez à un grand puzzle. Il est beaucoup plus facile de diviser le puzzle en sections, assembler chaque section individuellement et ensuite assembler les sections pour finir le puzzle, que d'essayer d'assembler le puzzle en une seule étape.  
+
+Des exemples que vous avez déjà rencontré dans le cadre de cette unité:  
+#### Le Tri Fusion (Merge Sort)
+1. **Théorie** :
+    - Divisez le tableau en deux moitiés égales jusqu'à ce que chaque sous-tableau contienne un seul élément.
+    - Fusionnez les sous-tableaux de manière à ce qu'ils soient triés lors de la fusion.
+    - Le processus de fusion est répété jusqu'à ce que nous obtenions le tableau trié final.
+
+#### Le Tri Rapide (Quick Sort)
+1. **Théorie** :
+    - Sélectionnez un élément du tableau comme pivot.
+    - Réorganisez le tableau de sorte que tous les éléments inférieurs au pivot viennent avant lui, tandis que tous les éléments supérieurs viennent après.
+    - Appliquez récursivement la même opération aux sous-tableaux formés par les éléments inférieurs et supérieurs au pivot.
+
+#### La Recherche Binaire
+1. **Théorie** :
+    - Le principe de la recherche binaire est de diviser continuellement de moitié le domaine de recherche jusqu'à ce que l'élément recherché soit trouvé.
+    - Elle nécessite que le tableau dans lequel la recherche est effectuée soit déjà trié.
+
+#### Conclusion
+Les algorithmes "diviser pour régner" sont puissants car ils transforment des problèmes complexes en sous-problèmes plus simples et gérables, souvent en améliorant l'efficacité par rapport aux approches plus naïves.
+
+#### Pour aller plus loin
+- Réfléchissez à d'autres problèmes où vous pourriez appliquer la stratégie "diviser pour régner".
+- Essayez de modifier les algorithmes pour gérer les cas de figures spéciaux ou les optimisations.
+
+## Leçon 7 : Algorithmes de parcours
+
+Dans cette leçon, vous allez explorer les algorithmes de parcours, des outils puissants pour naviguer et rechercher des données dans des structures complexes telles que les graphes.
+
+#### Objectifs de la leçon
+À la fin de cette leçon, vous serez capable de :
+- Comprendre et implémenter les algorithmes de parcours en largeur (BFS) et en profondeur (DFS).
+- Analyser la complexité spatiale et temporelle des algorithmes de parcours.
+- Discerner les cas d'usage où les algorithmes de parcours sont les plus efficaces.
+- Appliquer l'algorithme de Dijkstra pour trouver le chemin le plus court dans un graphe pondéré.
+- Utiliser l'algorithme A* pour la recherche de chemin avec heuristiques.
+
+**Introduction**
+Les algorithmes de parcours sont essentiels pour travailler avec des structures de données telles que les graphes. Ils permettent de rechercher des données, de trouver des chemins, de vérifier l'existence de connexions et de résoudre bien d'autres problèmes complexes. Comprendre ces algorithmes est crucial pour aborder des problèmes comme la planification de trajets, la navigation dans des réseaux, et l'exploration de données structurées.
+
+#### Exemple conceptuel
+Imaginez que vous deviez trouver un livre spécifique dans une grande bibliothèque. Une approche serait de parcourir chaque allée en inspectant chaque livre (BFS), ou vous pourriez commencer à une extrémité et explorer en profondeur allée par allée (DFS). La méthode choisie affectera l'efficacité de votre recherche en fonction de l'organisation de la bibliothèque, ce qui reflète l'importance de sélectionner l'algorithme de parcours approprié pour différentes structures de données.
+
+Les graphes sont des structures de données extrêmement puissantes et polyvalentes, car elles peuvent représenter presque toute situation où quelque chose est connecté à autre chose. Voici quelques exemples de sources de données et de jeux de données de la vie réelle qui sont souvent organisés sous forme de graphes, ainsi que des cas d'utilisation qui justifieraient l'emploi d'une approche de parcours spécifique :
+
+### Exemples de sources de données organisées en graphes :
+
+1. **Réseaux sociaux** : Les utilisateurs sont des nœuds et les relations (amis, suivis, etc.) sont des arêtes.
+   - **Parcours en largeur (BFS)** : Idéal pour trouver des amis "à un degré de séparation" ou pour implémenter des fonctionnalités comme "les personnes que vous pourriez connaître".
+   - **Parcours en profondeur (DFS)** : Utile pour analyser des groupes de communautés fermées ou des recommandations basées sur des connexions plus profondes.
+2. **Cartes et Navigation** : Les intersections et les adresses sont des nœuds, et les routes sont des arêtes.
+   - **Dijkstra/A*** : Utilisés pour trouver le chemin le plus court entre deux points, comme dans les applications de navigation GPS.
+3. **Internet (Web)** : Les pages Web sont des nœuds et les hyperliens sont des arêtes.
+   - **BFS** : Employé par les moteurs de recherche pour le parcours du web (web crawling), où une recherche en largeur peut rapidement indexer les pages accessibles depuis un point donné.
+   - **DFS** : Utilisé pour des analyses plus profondes d'un site spécifique ou pour détecter des boucles de redirection.
+4. **Réseaux de transport public** : Les stations sont des nœuds et les lignes de transport sont des arêtes.
+   - **Dijkstra/A*** : Pour optimiser les trajets, en tenant compte des horaires et des coûts.
+5. **Biologie (Réseaux de protéines)** : Les protéines sont des nœuds et les interactions biochimiques sont des arêtes.
+   - **DFS** : Pour explorer les voies métaboliques ou les cascades de signalisation.
+6. **Systèmes de recommandation** : Les produits ou les films sont des nœuds et les préférences ou achats des utilisateurs sont des arêtes.
+   - **BFS/DFS** : Pour explorer les recommandations basées sur des éléments similaires ou des connexions d'utilisateurs.
+7. **Systèmes de distribution électrique** : Les sources d'énergie sont des nœuds et les lignes de transmission sont des arêtes.
+   - **BFS** : Pour identifier les points de défaillance ou les chemins de distribution optimaux.
+
+### Exemple d'usages justifiant une approche de parcours :
+- **Pour des alertes rapides ou des mises à jour dans un réseau social (BFS)** : Si un utilisateur fait une mise à jour importante, BFS peut être utilisé pour propager rapidement l'information à tous ses contacts directs.
+- **Pour la planification de trajets avec multiples critères (Dijkstra/A***)** : Dans un réseau de transport, si un voyageur souhaite minimiser le temps de trajet tout en évitant les routes à péage, l'algorithme A* peut être utilisé avec une heuristique qui favorise les chemins les plus rapides sans péage.
+- **Pour le débogage de réseaux (DFS)** : Lors du débogage d'un réseau complexe, DFS peut être utilisé pour suivre un chemin de connexion particulier en profondeur pour identifier où une défaillance pourrait se produire.
+- **Pour la réorganisation d'un entrepôt (BFS ou DFS)** : Si un entrepôt doit être réorganisé, BFS pourrait être utilisé pour déplacer les articles les plus fréquemment accessibles vers les emplacements les plus accessibles, tandis que DFS pourrait être utilisé pour des stratégies de stockage basées sur la catégorisation des articles.
+
+Ces exemples illustrent comment les données structurées en graphes peuvent être utilisées pour résoudre des problèmes concrets dans différents domaines, avec une sélection judicieuse de l'algorithme de parcours en fonction des besoins spécifiques.
+
+### Parcours en largeur (Breadth-First Search - BFS)
+
+Le parcours en largeur est un algorithme qui commence à la racine (ou à un nœud quelconque d'un graphe) et explore tous les voisins de ce nœud. Ensuite, pour chacun de ces voisins les plus proches, il explore leurs voisins non visités et ainsi de suite, jusqu'à ce que tout soit exploré.
+
+**Applications pratiques de BFS:**
+- Trouver le chemin le plus court dans un graphe non pondéré.
+- Niveau par niveau de commande ou recherche de niveau (par exemple, dans les arbres de décision).
+
+**Complexité :**
+- Temporelle : \( O(V + E) \) où \( V \) est le nombre de sommets et \( E \) le nombre d'arêtes dans le graphe.
+- Spatiale : \( O(V) \) car il faut stocker les sommets dans une file d'attente.
+
+**Cas d'usage :**
+- Favorable : Lorsque la solution est attendue d'être proche de la racine.
+- Défavorable : Si la recherche s'étend sur de nombreux niveaux sans trouver de solution.
+
+**Travaux dirigés :**
+Voyons comment le BFS se comporte pour déterminer le chemin qui existe entre deux nœuds dans un graphe.
+
+```mermaid
+graph TB;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    D-->E;
+```
+
+Le code commenté de l'algorithme:
+
+```python
+from collections import deque
+
+# Définir le graphe sous forme de liste d'adjacence
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['D'],
+    'D': ['E'],
+    'E': []
+}
+
+# Fonction pour effectuer le BFS et trouver le chemin le plus court
+def bfs_shortest_path(graph, start, goal):
+    # Garder une trace des nœuds explorés
+    explored = []
+    # Garder une trace de tous les chemins à vérifier
+    queue = deque([[start]])
+
+    # Retourner le chemin si le début est la fin
+    if start == goal:
+        return [start]
+
+    # Continuer la boucle tant qu'il y a des nœuds à vérifier
+    while queue:
+        # Prendre le premier chemin de la queue
+        path = queue.popleft()
+        # Prendre le dernier nœud du chemin
+        node = path[-1]
+        if node not in explored:
+            neighbours = graph[node]
+            # Parcourir tous les nœuds voisins, construire un nouveau chemin et l'ajouter à la queue
+            for neighbour in neighbours:
+                new_path = list(path)
+                new_path.append(neighbour)
+                queue.append(new_path)
+                # Retourner le chemin si le voisin est le but
+                if neighbour == goal:
+                    return new_path
+
+            # Marquer le nœud comme exploré
+            explored.append(node)
+
+    # Au cas où il n'y a pas de chemin entre les deux nœuds
+    return []
+
+# Trouver le chemin le plus court
+shortest_path = bfs_shortest_path(graph, 'A', 'E')
+print(shortest_path)
+```
+
+Et voici le résultat de cette execution:
+```mermaid
+graph TB;
+    A-->|BFS|B;
+    B-->|BFS|D;
+    C-.->|pas parcouru|D;
+    A-.->|pas parcouru|C;
+    D-->|BFS|E;
+    style A fill:#f9dada
+    style B fill:#f9dada
+    style C fill:#f9f9f9
+    style D fill:#f9dada
+    style E fill:#f9dada
+```
+
+### Parcours en profondeur (Depth-First Search - DFS)
+
+Le parcours en profondeur explore aussi loin que possible le long d'une branche avant de revenir en arrière. C'est un algorithme récursif qui utilise le concept de backtracking. Il implique une recherche exhaustive à travers toutes les branches d'un graphe.
+
+**Applications pratiques de DFS:**
+- Détection de cycle dans un graphe.
+- Ordonnancement des tâches (avec des dépendances ou des prérequis) où il ne faut rien oublier.
+
+**Complexité :**
+- Temporelle : \( O(V + E) \)
+- Spatiale : \( O(V) \) en moyenne, mais peut être réduite à \( O(\text{hauteur de l'arbre}) \) pour les graphes arborescents.
+
+**Cas d'usage :**
+- Favorable : Pour la recherche de composants fortement connectés ou la détection de cycles.
+- Défavorable : Lorsque le graphe est très dense et les solutions se trouvent loin de la racine.
+
+**Travaux dirigés :**
+Voyons comment le DFS se comporte pour déterminer le chemin qui existe entre deux nœuds dans un graphe.
+
+```mermaid
+graph LR;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+    D-->E;
+```
+
+Le code commenté de l'algorithme:
+
+```python
+def has_path_dfs(graph, source, target):
+  if source == target:
+      return True
+
+  for neighbor in graph[source]:
+      if has_path_dfs(graph, neighbor, target):
+          return True
+
+  return False
+
+# Exemple d'utilisation:
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D', 'C'],
+    'C': ['D', 'E'],
+    'D': ['E'],
+    'E': ['A']
+}
+
+print(has_path_dfs(graph, 'A', 'E'))  # Retourne True
+```
+
+Et voici le résultat de cette execution:
+```mermaid
+graph LR;
+    A-->|DFS|B;
+    B-->|DFS|D;
+    D-->|DFS|E;
+    E-->|DFS|C;
+    style A fill:#f9dada
+    style B fill:#f9dada
+    style C fill:#f9dada
+    style D fill:#f9dada
+    style E fill:#f9dada
+    A-->C;
+    C-->D;
+```
+
+### Algorithmes sur les graphes
+
+#### Algorithme de Dijkstra
+
+C'est un algorithme qui trouve le chemin le plus court entre deux nœuds dans un graphe pondéré. Il permet de résoudre le problème du plus court chemin depuis un sommet de départ vers tous les autres sommets du graphe comme dans les systèmes de navigation GPS pour trouver le chemin le plus rapide.
+
+**Complexité :**
+- Temporelle : \( O(V^2) \), mais peut être réduite à \( O(V + E \log V) \) avec une file de priorité.
+- Spatiale : \( O(V) \)
+
+**Cas d'usage :**
+- Favorable : Graphe sans poids négatifs, recherche de chemin minimum dans les réseaux routiers.
+- Défavorable : Graphe avec des arêtes de poids négatif où l'algorithme pourrait ne pas fonctionner correctement.
+
+**Travaux dirigés :**
+Voyons comment le algorithme de Dijkstra se comporte pour déterminer le chemin qui existe entre deux nœuds dans ce graphe depuis A vers D.
+
+```mermaid
+graph TD;
+    A--1-->B;
+    A--5-->C;
+    B--1-->D;
+    C--1-->D;
+    D--1-->E;
+    B--3-->E;
+```
+
+Le code commenté de l'algorithme:
+
+```python
+import heapq  # Importation du module heapq pour utiliser une file de priorité
+
+def dijkstra(graph, start, end):
+    # Initialisation
+    min_heap = [(0, start, [])]  # Tas min sous forme de liste de tuples (distance, nœud, chemin)
+    visited = set()  # Ensemble pour garder une trace des nœuds visités
+
+    while min_heap:
+        # On extrait le nœud avec la plus petite distance
+        (cost, node, path) = heapq.heappop(min_heap)
+        if node not in visited:
+            # Marquer le nœud comme visité
+            visited.add(node)
+            path = path + [node]  # Ajouter le nœud au chemin
+
+            # Si le nœud de fin est atteint, retourner le coût et le chemin
+            if node == end:
+                return cost, path
+
+            # Examiner tous les voisins du nœud courant
+            for neighbor, weight in graph[node].items():
+                if neighbor not in visited:
+                    # Ajouter le nouveau coût et chemin au tas min
+                    heapq.heappush(min_heap, (cost + weight, neighbor, path))
+
+    return float("inf"), []  # Retourner l'infini si aucun chemin n'est trouvé
+
+# Définir le graphe comme un dictionnaire de dictionnaires
+graph = {
+    'A': {'B': 1, 'C': 5},
+    'B': {'D': 3, 'E': 1},
+    'C': {'D': 2},
+    'D': {'E': 2},
+    'E': {'D': 1}
+}
+
+# Appliquer l'algorithme de Dijkstra du nœud A au nœud D
+print(dijkstra(graph, 'A', 'D'))
+```
+
+Et voici le résultat de cette execution:
+```mermaid
+graph TD;
+    A--1 
+    Dijkstra-->B;
+    A--5-->C;
+    B<--3-->D;
+    C--2-->D;
+    D--2-->E;
+    E--1
+    Dijkstra-->D;
+    B--1
+    Dijkstra-->E;
+    style A fill:#f9dada
+    style B fill:#f9dada
+    style E fill:#f9dada
+    style D fill:#f9dada
+```
+
+**Exercice :**
+Vous allez appliquer l'algorithme de Dijkstra pour déterminer le chemin le plus court dans un réseau de transport.
+
+#### Algorithme A*
+
+L'algorithme A* est une méthode populaire et efficace pour trouver le chemin le plus court entre deux nœuds dans un graphe, en tenant compte des coûts pour atteindre chaque nœud. Il combine les avantages de l'algorithme de Dijkstra, qui est excellent pour trouver le chemin le plus court, avec ceux de l'algorithme de recherche en premier par le meilleur (Best-First Search), qui est efficace pour diriger la recherche dans la direction de la cible.
+Il est souvent utilisé dans la planification de chemin dans les jeux vidéo ou dans l'achéminement et l'optimisation des déplacements ou réquilibrage. Il combine des aspects de l'algorithme de Dijkstra et des heuristiques et il est plus efficace que le simple BFS ou DFS pour des recherches dans des espaces vastes et complexes.
+
+**Complexité :**
+- Temporelle : \( O(V + E) \), mais dépend fortement de l'heuristique.
+- Spatiale : \( O(V) \)
+
+**Cas d'usage :**
+- Favorable : Lorsqu'une bonne heuristique est disponible, comme dans les jeux de plateau.
+- Défavorable : Si l'heuristique n'est pas adéquate, ce qui peut entraîner une exploration inutilement vaste.
+
+**Travaux dirigés :**
+Voyons comment le algorithme A* se comporte pour déterminer le chemin qui existe entre deux nœuds dans un graphe avec des obstacles entre A et F. L'heuristique de ces deplacements est que tout deplacement ajoute un coût de 1 au poid du parcours.
+
+```mermaid
+graph TD;
+    A--1-->B;
+    A--4-->C;
+    B--2-->C;
+    C--1-->D;
+    B--2-->E;
+    D--3-->E;
+    E--5-->F;
+```
+
+Le code commenté de l'algorithme:
+
+```python
+import heapq
+
+def a_star_algorithm(start_node, stop_node):
+    open_set = set([start_node])
+    closed_set = set([])
+    
+    # g contient les distances actuelles depuis le début jusqu'au nœud actuel
+    g = {}
+    
+    # Les parents contiennent un mappage du nœud enfant au nœud parent
+    parents = {}
+    
+    # La distance du début jusqu'au nœud de départ est 0
+    g[start_node] = 0
+    
+    # le début n'a pas de parent
+    parents[start_node] = start_node
+    
+    while len(open_set) > 0:
+        n = None
+        
+        # trouve un nœud avec la valeur f la plus basse actuellement
+        for v in open_set:
+            if n == None or g[v] + heuristic(v) < g[n] + heuristic(n):
+                n = v;
+        
+        if n == stop_node or graph_nodes[n] == None:
+            pass
+        else:
+            for (m, weight) in get_neighbors(n):
+                # les nœuds sont ajoutés à open_set seulement s'ils ne sont pas dans closed_set
+                if m not in open_set and m not in closed_set:
+                    open_set.add(m)
+                    parents[m] = n
+                    g[m] = g[n] + weight
+                
+                # pour les nœuds qui sont déjà dans open_set, vérifiez si le chemin depuis le début
+                # et à travers n est plus court que jusqu'à présent connu plus court chemin à m
+                else:
+                    if g[m] > g[n] + weight:
+                        # Mettre à jour g[m]
+                        g[m] = g[n] + weight
+                        # Changez le parent de m en n
+                        parents[m] = n
+                        
+                        # Si m était dans closed_set, déplacez-le vers open_set, car maintenant un
+                        # chemin plus court a été trouvé
+                        if m in closed_set:
+                            closed_set.remove(m)
+                            open_set.add(m)
+
+        if n == None:
+            print('Chemin non trouvé')
+            return None
+
+        # si le nœud actuel est l'arrêt, alors commencez à reconstruire le chemin de l'arrêt à
+        # début, en retournant le chemin et le coût total du chemin
+        if n == stop_node:
+            path = []
+            
+            while parents[n] != n:
+                path.append(n)
+                n = parents[n]
+            
+            path.append(start_node)
+            
+            path.reverse()
+            
+            print('Chemin trouvé: {}'.format(path))
+            return path, g[stop_node]
+
+        # déplacez n vers closed_set, car tous ses voisins ont été inspectés
+        open_set.remove(n)
+        closed_set.add(n)
+
+    print('Chemin non trouvé')
+    return None
+
+def get_neighbors(v):
+    if v in graph_nodes:
+        return graph_nodes[v]
+    else:
+        return None
+
+# Heuristique - dans ce cas, nous utilisons une heuristique simple, qui est l'identité
+def heuristic(n):
+    return 1
+
+# définition du graphe
+graph_nodes = {
+    'A': [('B', 1), ('C', 4)],
+    'B': [('C', 2), ('E', 2)],
+    'C': [('D', 1)],
+    'D': [('E', 3)],
+    'E': [('F', 5)],
+    'F': None
+}
+
+# Exécution de l'algorithme A*
+path, cost = a_star_algorithm('A', 'F')
+print("Coût total du chemin: ", cost)
+```
+
+Le chemin trouvé par l'algorithme A* du nœud A au nœud F est ['A', 'B', 'E', 'F'] avec un coût total de 8. Cela signifie que, en suivant la meilleure estimation à chaque étape, l'algorithme a déterminé que le chemin le plus court d'A à F passe par les nœuds B et E, et le coût total du déplacement est de 8 unités en utilisant l'heuristique que chaque déplacement ajoute un coût de 1.
+
+Et voici le résultat de cette execution:
+```mermaid
+graph TD;
+    A(Départ de A) -->|Explorer les voisins| B(Évaluer B)
+    A -->|Explorer les voisins| C(Évaluer C)
+    B -->|Coût = gB + hB| D{Choisir le nœud avec le Fn le plus bas}
+    C -->|Coût = gC + hC| D
+    D --> E{Est-ce F ?}
+    E -->|Oui| F(Arrivée à F)
+    E -->|Non, explorer les voisins| G{Choisir le nœud suivant}
+    G --> B
+    G --> C
+    F --> H(Construire le chemin de F à A)
+```
+
+**Exercice :**
+Vous allez utiliser A* pour trouver un chemin dans un jeu de plateau où vous devez éviter des obstacles.
+
+**Conclusion de la leçon :**
+En maîtrisant ces algorithmes de parcours, vous aurez les outils pour aborder de nombreux problèmes classiques en informatique et développer des solutions efficaces pour des applications réelles.
