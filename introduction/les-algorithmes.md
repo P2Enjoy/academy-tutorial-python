@@ -1006,3 +1006,148 @@ Vous allez utiliser A* pour trouver un chemin dans un jeu de plateau où vous de
 
 **Conclusion de la leçon :**
 En maîtrisant ces algorithmes de parcours, vous aurez les outils pour aborder de nombreux problèmes classiques en informatique et développer des solutions efficaces pour des applications réelles.
+
+## Leçon 8: Algorithmes avancés et applications pratiques
+
+### Objectifs de la leçon
+À la fin de cette leçon, vous serez capable de :
+- Comprendre le concept de programmation dynamique et comment l'appliquer pour résoudre des problèmes complexes.
+- Utiliser l'algorithme de backtracking pour résoudre des problèmes de recherche exhaustive.
+- Identifier des situations réelles où ces algorithmes peuvent être appliqués pour optimiser des solutions.
+
+### Introduction
+Dans les leçons précédentes, vous avez appris les bases des algorithmes de recherche et de tri, ainsi que des structures de données essentielles. Maintenant, vous allez découvrir des techniques algorithmiques plus avancées qui vous permettront de résoudre des problèmes plus complexes de manière efficace.
+
+#### Partie 1: Programmation dynamique
+- **Définition et principe** : Vous apprendrez ce qu'est la programmation dynamique et comment elle peut être utilisée pour optimiser la résolution de problèmes qui peuvent être décomposés en sous-problèmes imbriqués.
+- **Exemple pratique : Le problème du sac à dos** : Nous allons comenter une solution au problème du sac à dos en utilisant la programmation dynamique pour comprendre comment les sous-problèmes sont résolus et combinés.
+
+### Exemple de Programmation Dynamique: Le Problème du Sac à dos
+
+Le problème du sac à dos est un problème d'optimisation combinatoire. Vous devez remplir un sac avec les objets ayant la plus grande valeur sans dépasser la capacité du sac. Voici un exemple d'implémentation de la programmation dynamique pour résoudre ce problème :
+
+```python
+def sac_a_dos(capacite, poids, valeurs, n):
+    """
+    Résolution du problème du sac à dos en utilisant la programmation dynamique.
+    :param capacite: Capacité maximale du sac à dos
+    :param poids: Liste des poids de chaque objet
+    :param valeurs: Liste des valeurs de chaque objet
+    :param n: Nombre total d'objets
+    :return: Valeur maximale que l'on peut emporter
+    """
+    # Tableau pour stocker les résultats des sous-problèmes
+    K = [[0 for x in range(capacite + 1)] for x in range(n + 1)]
+
+    # Construire le tableau K[][] en bas vers le haut
+    for i in range(n + 1):
+        for w in range(capacite + 1):
+            if i == 0 or w == 0:
+                K[i][w] = 0
+            elif poids[i-1] <= w:
+                # Choisir l'objet ou non
+                K[i][w] = max(valeurs[i-1] + K[i-1][w-poids[i-1]],  K[i-1][w])
+            else:
+                K[i][w] = K[i-1][w]
+
+    return K[n][capacite]
+
+# Exemple d'utilisation
+valeurs = [60, 100, 120]
+poids = [10, 20, 30]
+capacite = 50
+n = len(valeurs)
+print(sac_a_dos(capacite, poids, valeurs, n))
+```
+
+#### Partie 2: Algorithme de Backtracking
+- **Définition et principe** : Vous découvrirez la méthode de backtracking, une technique de recherche exhaustive qui permet de résoudre des problèmes de satisfaction de contraintes.
+- **Exemple pratique : Le problème des N-Reines** : Nous allons commenter un algorithme pour placer N reines sur un échiquier de N×N sans qu'elles ne s'attaquent.
+
+### Exemple d'Algorithme de Backtracking: Le Problème des N-Reines
+
+Le problème des N-Reines consiste à placer N reines sur un échiquier de taille N×N de manière à ce qu'aucune reine ne puisse s'attaquer. Voici une solution possible utilisant le backtracking :
+
+```python
+def est_sure(echiquier, ligne, colonne, n):
+    """
+    Vérifier si une reine peut être placée sur l'échiquier[ligne][colonne].
+    Cette fonction est appelée lorsqu'on place les reines une par une dans les colonnes.
+    :param echiquier: L'échiquier
+    :param ligne: Index de la ligne de l'échiquier
+    :param colonne: Index de la colonne de l'échiquier
+    :param n: Nombre total de reines à placer
+    :return: True si la reine peut être placée, False sinon
+    """
+    # Vérifier la ligne sur la gauche
+    for i in range(colonne):
+        if echiquier[ligne][i] == 1:
+            return False
+
+    # Vérifier la diagonale supérieure à gauche
+    for i, j in zip(range(ligne, -1, -1), range(colonne, -1, -1)):
+        if echiquier[i][j] == 1:
+            return False
+
+    # Vérifier la diagonale inférieure à gauche
+    for i, j in zip(range(ligne, n, 1), range(colonne, -1, -1)):
+        if echiquier[i][j] == 1:
+            return False
+
+    return True
+
+def resoudre_n_reines(echiquier, colonne, n):
+    """
+    Résoudre le problème des N-Reines en utilisant le backtracking.
+    :param echiquier: L'échiquier
+    :param colonne: Index de la colonne courante
+    :param n: Nombre total de reines à placer
+    :return: True si toutes les reines sont placées correctement, False sinon
+    """
+    # Si toutes les reines sont placées
+    if colonne >= n:
+        return True
+
+    for i in range(n):
+        if est_sure(echiquier, i, colonne, n):
+            # Placer la reine
+            echiquier[i][colonne] = 1
+
+            # Récursivement placer le reste des reines
+            if res
+
+oudre_n_reines(echiquier, colonne + 1, n):
+                return True
+
+            # Si placer la reine en echiquier[i][colonne] ne conduit pas à une solution, alors retirer la reine (backtrack)
+            echiquier[i][colonne] = 0
+
+    # Si la reine ne peut pas être placée dans aucune ligne de cette colonne
+    return False
+
+def solution_n_reines(n):
+    """
+    Cette fonction résout le problème des N-Reines en utilisant le backtracking.
+    Elle renvoie principalement un échiquier avec toutes les reines placées correctement.
+    :param n: Nombre de reines
+    :return: L'échiquier résolu
+    """
+    echiquier = [[0 for _ in range(n)] for _ in range(n)]
+
+    if not resoudre_n_reines(echiquier, 0, n):
+        print("Pas de solution existe")
+        return False
+    print(echiquier)
+    return True
+
+# Exemple d'utilisation
+n = 4
+solution_n_reines(n)
+```
+
+#### Partie 3: Applications pratiques des algorithmes
+- **Exploration d'applications** : Vous examinerez comment les algorithmes que vous avez appris peuvent être appliqués dans des situations réelles, comme la planification de chemin dans un jeu vidéo ou la décision de flux de travail dans une usine.
+- **Exercice de groupe** : Vous travaillerez en groupes pour identifier un problème dans votre domaine d'intérêt et proposerez une solution algorithmique, en utilisant la programmation dynamique ou le backtracking.
+
+# Conclusion
+Cette leçon conclut votre introduction aux algorithmes en Python. Avec les outils et techniques que vous avez acquis, vous êtes maintenant prêts à aborder des problèmes plus complexes et à appliquer vos connaissances pour développer des solutions efficaces et optimisées.
