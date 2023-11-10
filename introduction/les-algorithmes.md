@@ -835,16 +835,13 @@ print(dijkstra(graph, 'A', 'D'))
 Et voici le résultat de cette execution:
 ```mermaid
 graph TD;
-    A--1 
-    Dijkstra-->B;
+    A--1     Dijkstra-->B;
     A--5-->C;
     B<--3-->D;
     C--2-->D;
     D--2-->E;
-    E--1
-    Dijkstra-->D;
-    B--1
-    Dijkstra-->E;
+    E--1     Dijkstra-->D;
+    B--1     Dijkstra-->E;
     style A fill:#f9dada
     style B fill:#f9dada
     style E fill:#f9dada
