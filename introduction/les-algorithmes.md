@@ -6,7 +6,7 @@
 Un algorithme est une série d'instructions ordonnées et finies qui, lorsqu'elles sont suivies, mènent à la résolution d'un problème donné. En informatique, les algorithmes sont au cœur de la programmation, permettant de créer des solutions systématiques et efficaces à des problèmes complexes.
 
 **Histoire brève et importance des algorithmes**
-Le terme "algorithme" tire son origine du nom du mathématicien du 9ème siècle, Al-Khwarizmi. Historiquement, les algorithmes ont été utilisés pour le calcul numérique, la résolution d'équations, et la navigation. Aujourd'hui, ils sont essentiels dans des domaines aussi divers que le traitement de données, la recherche opérationnelle, l'intelligence artificielle, et bien plus encore.
+Le terme "algorithme" tire son origine du nom du mathématicien du 9ème siècle, Al-Khwarizmi. Historiquement, les algorithmes ont été utilisés pour le calcul numérique, la résolution d'équations, et la navigation. Aujourd'hui, ils sont essentiels dans des domaines aussi divers que le traitement de données, la recherche opérationnelle, l'intelligence artificielle et bien plus encore.
 
 **Algorithmes dans la vie quotidienne**
 Les algorithmes ne se limitent pas à l'informatique. Ils sont partout autour de nous : dans les recettes de cuisine, les itinéraires routiers, ou encore les instructions pour assembler des meubles.
@@ -22,7 +22,7 @@ Contrairement aux fonctions, qui sont des constructions du langage de programmat
 ### Pensée algorithmique
 
 **Analyser un problème**
-La première étape pour concevoir un algorithme est de comprendre clairement le problème. Cela implique de définir de façon précise ce qui est demandé, quelles sont les entrées disponibles, et quelle doit être la sortie.
+La première étape pour concevoir un algorithme est de comprendre clairement le problème. Cela implique de définir de façon précise ce qui est demandé, quelles sont les entrées disponibles et quelle doit être la sortie.
 
 **Décomposer le problème en étapes**
 Une fois le problème analysé, il convient de le découper en petites étapes. Chaque étape doit mener progressivement vers la solution.
@@ -78,7 +78,7 @@ print("Le nombre maximum est:", max_nombre)
 
 #### Exercices pratiques
 
-Après avoir appris à différencier une fonction d'un algorithme et à appliquer la pensée algorithmique, les étudiants pourront mettre en pratique ces concepts à travers plusieurs exercices.
+Après avoir appris à différencier une fonction d'un algorithme et à appliquer la pensée algorithmique, vous allez pouvoir mettre en pratique ces concepts à travers plusieurs exercices.
 
 **Exercice 1 : Trouver le minimum**
 Écrire un algorithme qui trouve le nombre le plus petit dans une liste.
@@ -191,8 +191,6 @@ Maintenant que vous avez vu et utilisé les deux algorithmes, vous allez utilise
 ### Conclusion de la leçon
 La recherche linéaire est simple à implémenter et fonctionne bien avec des listes non triées ou de petite taille. La recherche binaire, en revanche, est beaucoup plus rapide pour les listes triées, en particulier lorsque la taille de la liste est grande. Cependant, elle nécessite que la liste soit triée au préalable, ce qui peut être coûteux en termes de temps de traitement.
 
-Très bien, je vais rédiger la leçon détaillée sur les algorithmes de tri pour une classe d'étudiants en Python. Cette leçon portera sur le Tri par sélection, le Tri par insertion, le Tri à bulles, le Tri fusion et le Tri rapide.
-
 ---
 ## Leçon 4: Algorithmes de tri
 
@@ -224,8 +222,6 @@ def selection_sort(arr):
 
 Le tri par sélection a une complexité temporelle de \( O(n^2) \) car il doit parcourir la liste pour trouver le minimum pour chaque élément. Sa complexité spatiale est \( O(1) \) parce qu'il s'effectue en place sans utiliser de mémoire supplémentaire significative.
 
-**Complexité temporelle**: En moyenne \( O(n^2) \)
-
 ### Tri par insertion
 Le tri par insertion prend chaque élément de la liste et l'insère dans la partie déjà triée de la liste.
 
@@ -246,8 +242,6 @@ def insertion_sort(arr):
 
 Le tri par insertion a également une complexité temporelle de \( O(n^2) \), car dans le pire des cas, il doit comparer chaque élément avec tous les autres éléments déjà triés. Sa complexité spatiale est \( O(1) \) car il trie la liste en place.
 
-**Complexité temporelle**: En moyenne \( O(n^2) \)
-
 ### Tri à bulles
 Le tri à bulles compare les éléments adjacents et les échange s'ils sont dans le mauvais ordre. Ce processus est répété jusqu'à ce que la liste soit triée.
 
@@ -265,8 +259,6 @@ def bubble_sort(arr):
 - **Complexité spatiale**: \( O(1) \)
 
 Le tri à bulles a une complexité temporelle de \( O(n^2) \) en raison des deux boucles imbriquées qui effectuent des comparaisons. Il a une complexité spatiale de \( O(1) \) car il n'utilise qu'une quantité constante d'espace supplémentaire pour les variables d'échange.
-
-**Complexité temporelle**: En moyenne \( O(n^2) \)
 
 ### Tri fusion
 Le tri fusion divise la liste en deux moitiés, trie chacune d'elles et fusionne les deux listes triées.
@@ -309,8 +301,6 @@ def merge_sort(arr):
 
 Le tri fusion est plus rapide avec une complexité temporelle de \( O(n \log n) \), car il divise la liste en deux moitiés, trie chacune récursivement, puis les fusionne, ce qui prend logarithmiquement moins d'étapes que la taille de la liste. Cependant, sa complexité spatiale est \( O(n) \) car il nécessite de l'espace supplémentaire pour stocker les sous-listes pendant le tri.
 
-**Complexité temporelle**: \( O(n \log n) \)
-
 ### Tri rapide
 Le tri rapide choisit un élément comme pivot et partitionne les éléments autour du pivot, en plaçant les éléments plus petits à gauche et les plus grands à droite. Il trie ensuite récursivement les sous-listes.
 
@@ -333,9 +323,7 @@ x for x in arr[1:] if x > pivot]
 
 Le tri rapide a une complexité temporelle moyenne de \( O(n \log n) \), grâce à l'efficacité des partitions. Cependant, dans le pire des cas, lorsque le pivot est le plus petit ou le plus grand élément à chaque fois, il dégénère à \( O(n^2) \). Sa complexité spatiale est \( O(\log n) \) en raison de l'empilement des appels récursifs.
 
-**Complexité temporelle**: En moyenne \( O(n \log n) \), mais \( O(n^2) \) dans le pire des cas.
-
-### Explications sur les Complexités
+### Explications et resumé sur les Complexités
 - **Tri par sélection, insertion et à bulles**: Ces algorithmes ont tous une complexité temporelle quadratique car ils comparent des éléments dans des boucles imbriquées. Ils sont efficaces sur de petites listes ou des listes presque triées mais deviennent inefficaces pour les grandes listes.
 - **Tri fusion**: C'est un bon algorithme pour les grandes données en raison de sa complexité temporelle stable \( O(n \log n) \), mais il nécessite plus de mémoire, ce qui peut être un inconvénient pour les très grandes listes.
 - **Tri rapide**: C'est souvent l'algorithme de tri le plus rapide en pratique. Cependant, son efficacité dépend fortement du choix du pivot. Des stratégies comme choisir un pivot aléatoire ou médian peuvent aider à éviter le pire des cas.
@@ -359,7 +347,7 @@ En considérant à la fois la complexité temporelle et spatiale, vous pouvez ch
 - Découvrir et travailler avec des arbres et des tas.
 - Utiliser les tableaux et les dictionnaires pour stocker et accéder aux données efficacement.
 
-À la fin de cette leçon, vous comprendrez les structures de données de base en Python, y compris les piles, les files, les listes chaînées, les arbres et les dictionnaires. Vous serez capable d'implémenter ces structures, comprendrez leurs complexités temporelles et spatiales, et saurez quand les utiliser ou les éviter.
+À la fin de cette leçon, vous comprendrez les structures de données de base en Python, y compris les piles, les files, les listes chaînées, les arbres et les dictionnaires. Vous serez capable d'implémenter ces structures, comprendrez leurs complexités temporelles et spatiales et saurez quand les utiliser ou les éviter.
 
 **Introduction**
 Les structures de données sont des moyens systématiques d'organiser et de stocker des données afin de les rendre accessibles et modifiables efficacement. En Python, certaines structures de données sont intégrées, comme les listes et les dictionnaires, tandis que d'autres peuvent nécessiter des implémentations plus détaillées, comme les listes chaînées et les arbres.
@@ -477,12 +465,10 @@ Dans cette partie de la leçon, vous apprendrez comment représenter un arbre et
 ```
 
 ### Tableaux et Dictionnaires (Arrays and Dictionaries)
-Les tableaux en Python sont fournis sous forme de listes. Les dictionnaires sont des tableaux associatifs, où chaque valeur est associée à une clé unique.
+Les tableaux en Python sont fournis sous forme de listes. Les dictionnaires sont des tableaux associatifs où chaque valeur est associée à une clé unique.
 
 #### Utilisation des dictionnaires en Python :
-Vous utiliserez des dictionnaires pour stocker et accéder aux données
-
-via des clés.
+Vous utiliserez des dictionnaires pour stocker et accéder aux données via des clés au lieu de leur ordre.
 
 ```python
 # Création d'un dictionnaire
@@ -507,8 +493,6 @@ mon_dictionnaire['cle3'] = 'valeur3'
 ### Conclusion
 À la fin de cette leçon, vous aurez une solide compréhension des structures de données de base et de leur importance dans les algorithmes.
 
-Très bien, je vais préparer une ébauche détaillée pour la leçon 8, qui porte sur les algorithmes de type "diviser pour régner". Cette leçon introduira les étudiants aux principes de ces algorithmes et inclura des exemples pratiques de leur mise en œuvre en Python.
-
 ---
 ## Leçon 6: Algorithmes "Diviser pour Régner"
 
@@ -516,9 +500,6 @@ Très bien, je vais préparer une ébauche détaillée pour la leçon 8, qui por
 À la fin de cette leçon, vous serez capable de :
 - Comprendre le principe de l'approche "diviser pour régner".
 - Identifier des problèmes pouvant être résolus efficacement avec des algorithmes "diviser pour régner".
-- Implémenter l'algorithme du tri fusion en Python.
-- Implémenter l'algorithme du tri rapide en Python.
-- Utiliser la recherche binaire pour trouver des éléments dans un tableau trié.
 
 **Introduction**
 Le principe de "diviser pour régner" est une stratégie fondamentale en algorithmie qui consiste à diviser un problème en sous-problèmes de même nature, résoudre ces sous-problèmes, puis combiner leurs solutions pour obtenir la solution du problème original.
