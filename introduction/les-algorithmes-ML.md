@@ -1,3 +1,96 @@
+## Apprendre les définitions
+
+Déjà le commencement, psuique lorsque l'on parle de `data`, il y a de suite trois termes qui prennent le dessus et sont de suite évoqués. Nous allons les détailler afin de idéntifier quels sont leurs cas d'application.  
+
+**La Business Intelligence (BI)** est une méthode d'analyse de données qui permet aux entreprises de collecter, stocker, analyser et visualiser des données afin de prendre des décisions éclairées. Elle utilise des outils tels que les tableaux de bord, les rapports et les analyses pour aider les entreprises à comprendre leur performance et à identifier les tendances.  
+
+**Le Machine Learning (ML)** est une branche de l'intelligence artificielle qui utilise des algorithmes pour apprendre à partir de données et améliorer les performances d'une tâche sans être explicitement programmé. Il est utilisé dans de nombreux domaines, tels que la reconnaissance vocale, la reconnaissance d'images et la détection de fraudes.  
+
+**Intelligence Artificielle** est une discipline de l'informatique qui vise à créer des machines capables d'imiter la créativité et la prise de décision similaire à l'intelligence humaine. Elle utilise des techniques telles que le ML pour apprendre à partir de données et résoudre des problèmes complexes. L'IA est utilisée dans de nombreux domaines, tels que la génération d'images, la traduction automatique et les chatbots.  
+
+#### Alors, comment les distinguer?
+La BI est plus orientée vers l'analyse de données historiques, tandis que le ML et l'IA sont plus axés sur l'exploration, la prévision et l'analyse en temps réel. La BI est souvent utilisée pour résoudre des problèmes spécifiques, tandis que le ML est utilisé pour explorer des comportements et l'IA peut être utilisés pour simuler la prise de décision raisonnée.  
+
+Enfin la BI est souvent utilisée pour prendre des décisions opérationnelles, tandis que le ML est souvent utilisés pour prendre des décisions stratégiques et l'IA est utilisée pour automatiser.  
+
+#### Qu'est-ce que je peux faire faire à une IA ?
+
+L'intelligence artificielle (IA) est un domaine vaste et diversifié qui comprend de nombreuses sous-disciplines ou "familles".  
+
+- **Modèles de régression** : Ces modèles sont utilisés pour prédire une valeur continue en fonction des entrées. Par exemple, un modèle de régression pourrait être utilisé pour prédire le prix d'une maison en fonction de sa taille, de son emplacement, de son âge, etc.  
+- **Modèles de classification** : Ces modèles sont utilisés pour prédire à quelle catégorie appartient une entrée. Par exemple, un modèle de classification pourrait être utilisé pour prédire si un email est un spam ou non.  
+- **Modèles de clustering** : Ces modèles sont utilisés pour regrouper des entrées similaires ensemble. Par exemple, un modèle de clustering pourrait être utilisé pour regrouper des clients en fonction de leurs comportements d'achat.  
+- **Modèles génératifs (prédictifs)** : Ces modèles sont utilisés pour générer de nouvelles données qui ressemblent à la distribution des données d'entraînement. Ils sont souvent utilisés pour générer des images, du texte, de la musique, etc.  
+
+Nous allons les aborder tous ces sujets après les autres dans les prochains cours, hormis le Business Intelligence qui est hors de portée pour cette unité d'enseignement.
+
+## Fondements du Machine Learning
+
+### Introduction au Machine Learning
+
+**Machine Learning: Qu'est-ce que c'est?**
+
+Le Machine Learning (ML), ou apprentissage automatique en français, est un sous-ensemble de l'intelligence artificielle qui donne aux ordinateurs la capacité d'apprendre et de s'améliorer à partir de l'expérience sans être explicitement programmés. Imaginez un robot qui apprend à marcher par lui-même en tombant et en se relevant, ajustant chaque fois ses mouvements. De la même manière, en ML, les ordinateurs apprennent à partir de données.
+
+**Les Types de Machine Learning**
+
+Il existe principalement trois types de ML:
+1. **Apprentissage Supervisé**: Ici, l'ordinateur apprend à partir de données étiquetées. L'apprentissage supervisé est comme apprendre avec un professeur qui vous donne la bonne réponse après chaque question. Par exemple, si vous apprenez à reconnaître des fruits, le professeur vous montre une pomme et vous dit que c'est une pomme. Vous apprenez ainsi à associer l'image à la bonne étiquette.
+3. **Apprentissage Non Supervisé**: Dans ce cas, l'ordinateur apprend à partir de données non étiquetées. Il doit trouver des patterns et des structures par lui-même. L'apprentissage non supervisé est comme apprendre par vous-même sans professeur. Par exemple, si on vous donne un tas de fruits mélangés et qu'on vous demande de les trier, vous devez trouver un moyen de les organiser (par couleur, taille, forme, etc.) sans qu'on vous dise quelle est la bonne réponse.
+4. **Apprentissage par Renforcement**: Ici, l'apprentissage se fait par essais et erreurs, et l'ordinateur est récompensé lorsqu'il fait un bon choix. L'apprentissage par renforcement est comme apprendre à jouer à un jeu vidéo sans suivre de tutoriel ni lire le manuel d'instructions. Vous essayez différentes actions, vous voyez ce qui fonctionne et ce qui ne fonctionne pas et vous ajustez votre stratégie en conséquence pour obtenir le meilleur score possible.
+
+### Processus de Machine Learning
+
+**Étapes Clés dans le ML**
+1. **\[(E)xtract\] Collecte de Données**: Tout commence par la collecte de données. Comme un chef qui rassemble des ingrédients pour préparer un plat, l'apprentissage automatique nécessite des données pour construire des modèles.
+2. **\[(T)ransform\] Prétraitement des Données**: Les données brutes ne sont pas toujours prêtes à l'emploi. Il faut souvent les nettoyer et les organiser, un peu comme éplucher et couper les légumes avant de cuisiner.
+3. **\[(L)oad\] Entraînement et validation du Modèle**: C'est ici que l'ordinateur apprend réellement. Les données traitées sont utilisées pour entraîner un modèle. Cela ressemble à un apprenti cuisinier qui apprend à faire un plat en le pratiquant plusieurs fois (et valide son avancement en goûtant detemps en à autre pendant les préparations)
+4. **Test du Modèle**: Après l'entraînement, il est important de tester le modèle avec de nouvelles données pour évaluer sa performance. C'est comme faire goûter le plat à quelqu'un pour s'assurer qu'il est bon.
+5. **Déploiement**: Une fois le modèle testé et affiné, il est prêt à être utilisé dans des applications réelles. C'est envoyer l'apprenti en cuisine lors du service.
+
+### Applications Pratiques du Machine Learning
+
+**Le ML dans la Vie Quotidienne**
+1. **Recommandations de Produits**: Les sites de commerce en ligne utilisent le ML pour recommander des produits. En fonction de vos achats précédents et de votre navigation, ils prédisent ce qui pourrait vous plaire.
+2. **Reconnaissance Faciale**: Les smartphones utilisent le ML pour la reconnaissance faciale, permettant de déverrouiller votre téléphone en vous regardant simplement.
+3. **Prévision Météorologique**: Les modèles de ML aident à prévoir le temps, analysant d'énormes quantités de données météorologiques pour prédire le temps qu'il fera demain.
+
+### Le dictionnaire de l'IA et du ML
+
+En IA et en ML, on ne parle pas de _generation_ de données mais plutôt de **prédiction**. Quand bien même que l'on parlerait de ChatGPT et lorsqu'il *genère* du texte, en termes techniques nous dirions qu'il est en train de faire une **prédiction** d'un texte mot après mot.  
+
+En informatique et en théorie des algorithmes, les termes utilisés pour catégoriser et décrire les algorithmes peuvent varier en fonction de leurs caractéristiques, de leur complexité et de leur comportement. Tous les algorithmes *prédictifs*, comme ceux basés sur le programmation *dynamique*, le *ML* ou l'*IA*, sont dits des **algorithmes de optimisation**. Ce terme qui peut porter à confusion, est utilisé en opposition aux *algorithmes détérministes* que nous avons vu jusqu'auparavant et dont le résultat (en fonction du temps et de l'éspace nécéssaire à eur execution), finissent toujours par donner un résultat *exact et fini* (c'est à dire détérminé). Lorsqu'on parle de **optimisation**, cela fait généralement référence à la manière dont ces algorithmes ajustent leurs paramètres pour minimiser une *fonction de coût ou de perte*, c'est-à-dire qu'ils s'ajoustent de manière itérative pour améliorer leurs *prédictions* et finissent par donner un résultat **optimal** sans être jamais parfaitement exact.
+
+A la différence des humains qui *observent et déduisent* les règles de fonctionnement pour déviner un résultat *selon leur jugement et déduction*,  les IA **inférent** une prédiction en se basant sur la *probabilité*: il n'y a pas, pour ainsi dire, d'intelligence à proprement parler et aucun concept de comprehénsion.
+
+**Les mots de l'apprentissage**
+
+Ce n'est pas au hasard si le mot choisi en anglais c'est `training` pour cette phase et cela doit encore moins surprendre lorsque le résultat s'appelle `fit`, comme après une session de gym.  
+Alors et lors des phases d'apprentissage, le jeu du concepteur de ce système est de faire apprendre à la machine et depuis les données chargées, à généraliser: en d'autres termes, le modèle doit apprendre à faire des prédictions en se basant sur des données qu'il n'aurait pas vu auparavant qui seraient vraisemblables aux données observées précédemment et de la même espèce.  
+
+Lors de la conception d'un modèle de prédiction (ML ou IA), vous pourriez faire face à plusieurs risques qui pourraient compromettre vos résultats, il y a le risque liés à la collecte où vos données ne sont pas representative de la réalité dans la quelle vos prédictions sont censés opérer ou le répresentent trop précisemment laissant pas assez d'éspace pour la généralisation ou alors une representation très variée mais chaque categorie pas suffisemment representée ou une distribution des exemples disponibles entre catégories qui ne serait pas équitable; et il y a les risques liés à l'entrainement où vous pourriez ne pas montrer assez de données et d'avoir des prédiction trop aléatoires ou même pire de trop montrer de données et d'avoir un système incapable de répondre à des données qu'il n'aurait pas déjà vu. Nous abordons les sujets de *biais* et de *variance*, *overfit* et *underfit*.  
+
+- **La Variance** d'un modèle d'apprentissage automatique est sa sensibilité aux fluctuations dans l'ensemble de données d'entraînement. Un modèle avec une grande variance est susceptible de surapprendre les données d'entraînement et de mal se généraliser à de nouvelles données. La variance est comme essayer de juger de la qualité d'un restaurant en fonction d'un seul repas. Si vous avez un excellent repas, vous pourriez penser que le restaurant est toujours excellent, même si ce n'est pas toujours le cas.
+- **Le Biais** peut se référer à deux choses: un modèle qui aurait sa tendance à faire des prédictions systématiquement erronées ou les données q ui se produit lorsque l'ensemble de données ne représente pas équitablement toutes les catégories ou caractéristiques d'intérêt. Le biais est comme une balance qui n'est pas correctement calibrée et donne toujours un poids légèrement trop élevé ou trop faible. Ou c'est comme essayer de comprendre ce que les gens pensent en ne demandant l'avis qu'à un petit groupe de personnes.  
+- **Le surapprentissage (Overfitting)** se produit lorsqu'un modèle d'apprentissage automatique apprend trop bien les données d'entraînement et ne parvient pas à généraliser à de nouvelles données. Cela se produit souvent lorsque le modèle est trop complexe par rapport à la quantité et à la variété des données disponibles. Le surapprentissage est comme étudier pour un examen en mémorisant toutes les questions et réponses d'un ancien examen. Vous pourriez obtenir un score parfait si l'examen est exactement le même, mais si les questions changent même un peu alors vous risquez de ne pas bien faire.  
+- **Le sous-apprentissage (Underfitting)** se produit lorsqu'un modèle d'apprentissage automatique ne parvient pas à apprendre les données d'entraînement. Cela se produit souvent lorsque le modèle est trop simple pour capturer la complexité des données. Le sous-apprentissage est comme essayer de comprendre un livre en ne lisant que le résumé. Vous obtenez une idée générale de l'histoire, mais vous manquez beaucoup de détails et vous risquez de ne pas comprendre certaines parties.  
+
+La sauce secrète d'un entrainement se cache dans le jeu de données calibré à vos besoins, que l'on appelera dorénavant **dataset d'apprentissage** et dans la façon que vous allez laisser votre modèle s'entrainer dessus. Les machines ont besoin d'apprendre par itération, necessitent de comparer l'ensemble de leur base d'apprentissage avec l'ensemble des données à apprendre et de comparer ses résultats avec la réalité pour parvenir à *inférer* les bonnes *probabilités* lors d'une *prédiction*. Ainsi et a différence d'un humain, une seule observation d'une même donnée ne sera pas suffisante et une base d'apprentissage devra être montrée plusieurs fois à différent stades d'apprentissage afin de pouvoir en calculer une base statistique fiable. Vous l'aurez compris, nous abordons ici les paramètres à prendre en compte lors de la phase de *training* qui sont les **époques**, les **batchs** et le **taux d'apprentissage**.
+
+- **Le Taux d'Apprentissage** est un paramètre dans les algorithmes d'optimisation qui détermine la taille des mises à jour apportées aux paramètres du modèle à chaque étape de l'entraînement. Le taux d'apprentissage est comme la vitesse avec la quelle vous traversez une ville sur un week-end pour la visiter: trop rapide, vous aller tout visiter sans retenir que peu; trop lentement et vous n'auriez pas le temps de tout visiter.
+- **Un Epoch** est une passe complète à travers l'ensemble de dataset d'apprentissage pendant le processus d'entraînement d'un modèle d'apprentissage automatique. Une epoch est comme un tour complet d'un jeu de société. À la fin de chaque tour (ou epoch), vous avez vu toutes les cartes (ou données) une fois.
+- **Un Batch** est un sous-ensemble de l'ensemble de données d'entraînement qui est utilisé pour mettre à jour le modèle dans le processus d'entraînement. La taille du batch est un paramètre important qui peut affecter la vitesse et la qualité de l'entraînement. Un batch est comme une petite pile de cartes que vous utilisez pour jouer à un jeu. Au lieu de jouer avec toutes les cartes en même temps, vous jouez avec une petite pile à la fois.
+
+Mais ce n'est pas tout, parce que et quand bien même vous auriez eu un dataset d'apprentissage équilibré et des paramètres d'apprentissages optimaux, tout n'est pas à réténir pour arriver à une prédiction. Un modèle de ML ou de IA est un algorithme très puissant qui peut arriver à détérminer des correlations entre les données à analyser (vos paramètres d'entrée) qui seraient impossibles à observer à l'oeil nu, cependant tout n'est pas détérminant pour réussir une prédiction. Il existent donc des paramètres qui servent à détérminer quand certaines probabilités sont à prendre en compte ou pas et alors même que ces paramètrent jouent un rôle bienque minime *statistiquement parlant*. Nous abordons les sujets de **function d'activation** et de **fonction de perte** qui rentrent en jeu respectivement lors de la phase d'*prédiction* et de la phase de *entrainement*.
+
+L'observation que même avec un ensemble de données d'apprentissage bien équilibré et des paramètres d'apprentissage optimisés, tous les éléments de données ne sont pas nécessairement pertinents pour réaliser une prédiction est cruciale en machine learning et en IA: imaginons que vous ayez un ensemble de données sur les étudiants comprenant diverses informations telles que leurs heures d'étude, leurs activités parascolaires, leur alimentation, leurs habitudes de sommeil et même la couleur de leurs cahiers. En entrainant un modèle de ML pour prédire la réussite scolaire, vous pourriez constater que certaines variables, comme les heures d'étude et les habitudes de sommeil, sont fortement corrélées avec de bons résultats scolaires. Cependant, d'autres données, comme la couleur des cahiers, n'ont probablement aucun impact significatif sur la performance académique, bien que l'algorithme puisse détecter une corrélation. Un modèle de ML pourrait identifier une corrélation entre la réussite scolaire et des facteurs apparemment non pertinents, comme la couleur des cahiers. Pour un humain, il est évident que cette corrélation est probablement fortuite ou non causale. Mais un modèle de ML pourrait l'interpréter comme un facteur influent, surtout si par hasard dans les données d'apprentissage, les étudiants performants avaient tendance à utiliser des cahiers de couleur spécifique. En l'absence d'une sélection judicieuse des caractéristiques à prendre en compte, un modèle peut inclure du bruit ou des corrélations non pertinentes conduisant à des prédictions trompeuses. Ainsi, ce genre de bruit peut être filtré grace à une *fonction d'activation* qui ne permettrait pas à des statistiques *insignifiantes* d'être prise en jeu dans le calcul de la *probabilité* d'une certaine *prédiction*.  
+
+- **La Fonction d'Activation** est une fonction utilisée pour transformer la sortie. Des exemples courants de fonctions d'activation incluent la fonction sigmoïde, la fonction TanH et la fonction ReLU. Une fonction d'activation est comme le déclic que vous ressentez lorsque vous comprenez quelque chose. Elle prend votre pensée floue et la transforme en une idée claire et précise tout en filtrant tout ce qui n'est pas assez clair ou insignifiant.
+
+Mais comment est-ce que l'influence d'un paramètre sur l'ensemble de l'apprentissage est détérminé? C'est le rôle de la *fonction de perte.
+
+- **La Fonction de Perte** est une fonction qui mesure à quel point les prédictions d'un modèle d'apprentissage automatique sont éloignées des valeurs réelles pendant la phase d'apprentissage. L'objectif de l'entraînement est de minimiser cette fonction de perte (sans la baisser à zéro qui serait du *overfit* extrème). Une fonction de perte est comme une mesure de combien vous êtes loin de la cible lorsque vous jouez aux fléchettes. Plus vous êtes proche du centre, plus votre score (ou perte) est faible.
+
 ## Algorithmes de Machine Learning Simples
 
 Dans chaque leçon, nous aborderons la théorie derrière chaque algorithme, suivie d'une implémentation pratique en Python. Nous utiliserons du pure-python et son equivalent `scikit-learn` (une bibliothèque populaire pour le machine learning) pour construire et évaluer les modèles. Des exercices pratiques et des études de cas seront inclus pour renforcer l'apprentissage des concepts. Vous allez être encouragés à expérimenter avec différents paramètres et à analyser l'impact sur les performances du modèle.
