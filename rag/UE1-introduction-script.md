@@ -5,12 +5,6 @@
 
 Les Grands Modèles de Langage (LLMs) ont pris une place centrale dans le domaine de l'apprentissage automatique ces dernières années. Ces modèles ont changé le paysage de l'intelligence artificielle (IA) pour les années à venir. Cet article est une introduction à une série qui vise à expliquer et à construire des LLMs. L'objectif est de rendre ces concepts accessibles à tous, même sans connaissances préalables, en utilisant des schémas, des animations, du code Python et des explications mathématiques de base. Pour vraiment comprendre ces modèles complexes, il faut les examiner de plus près. Nous allons d'abord explorer le contexte des LLMs : les modèles qui les ont précédés, leurs limites et comment nous en sommes arrivés aux LLMs actuels.
 
-### Sommaire
-
-1 - Introduction aux Transformers
-2 - Vers les grands modèles de langage
-3 - Lectures complémentaires
-
 ---
 
 ### 1. Histoire et évolution des modèles de langage
@@ -272,21 +266,3 @@ Le score d'attention est calculé en multipliant les Queries par les Keys, suivi
 Le **Multi-Head Attention** est une extension de l'auto-attention, où plusieurs mécanismes d'attention sont appliqués en parallèle, permettant au modèle de capturer différents types de relations contextuelles simultanément. Chaque "head" d'attention apprend à se concentrer sur différents aspects de la séquence, enrichissant la représentation contextuelle.
 
 Les Transformateurs, grâce à leur mécanisme d'attention et leur architecture flexible, ont non seulement surmonté les limitations des modèles précédents, mais ont également ouvert de nouvelles perspectives pour les applications NLP, rendant les modèles pré-entraînés comme BERT, GPT et T5 incontournables dans le domaine.
-
-### Lectures complémentaires
-
-[*] Arbre évolutif des grands modèles de langage — [GitHub]
-
-[*] Attention is All You Need — [ArXiv]
-
-[*] Stanford CS224N NLP with Deep Learning | Winter 2021 | Lecture 7 — Translation, Seq2Seq, Attention — [YouTube]
-
-[*] History and Frontier of the Neural Machine Translation — [SyncedReview]
-
-[*] LONG SHORT-TERM MEMORY — [Université Johannes Kepler]
-
-[*] Transformer Language Models without Positional Encodings Still Learn Positional Information — [ArXiv]
-
-[*] Improving Language Understanding by Generative Pre-Training — [OpenAI]
-
-[*] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding — [ArXiv]
