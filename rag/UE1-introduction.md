@@ -319,12 +319,20 @@ Les Transformateurs ont ouvert la voie à une série de modèles pré-entraîné
 
 - **T5 (Text-To-Text Transfer Transformer)** : T5, également développé par Google, unifie toutes les tâches NLP sous un même format : la transformation de texte en texte. Que ce soit pour la traduction, le résumé, ou la classification, T5 traite chaque tâche comme un problème de transformation de texte, ce qui simplifie l'architecture et l'entraînement.
 
-##### Explication de l'attention et de l'auto-attention
-Le concept d'attention est au cœur du succès des Transformers. Voici une explication simplifiée de ce mécanisme :
+Bien sûr, ajoutons l'explication de l'attention croisée à cette explication :
 
-- **Attention** : Le mécanisme d'attention permet au modèle de pondérer l'importance de chaque mot dans une phrase lorsqu'il traite chaque mot de la séquence. Par exemple, pour traduire une phrase, l'attention aide le modèle à se concentrer sur les mots pertinents du texte source pour générer chaque mot du texte cible.
+---
 
-- **Auto-attention** : Dans les Transformers, chaque mot de la séquence considère l'ensemble des autres mots pour déterminer sur quels mots se concentrer. Cette auto-attention permet de capturer les relations entre les mots, indépendamment de leur distance dans la séquence. Ainsi, les Transformateurs peuvent gérer les dépendances à long terme plus efficacement que les modèles précédents.
+### Rappel de l'explication de l'attention, de l'auto-attention et de l'attention croisée
+
+#### Attention
+Le mécanisme d'attention permet au modèle de pondérer l'importance de chaque mot dans une phrase lorsqu'il traite chaque mot de la séquence. Par exemple, pour traduire une phrase, l'attention aide le modèle à se concentrer sur les mots pertinents du texte source pour générer chaque mot du texte cible.
+
+#### Auto-attention
+Dans les Transformers, chaque mot de la séquence considère l'ensemble des autres mots pour déterminer sur quels mots se concentrer. Cette auto-attention permet de capturer les relations entre les mots, indépendamment de leur distance dans la séquence. Ainsi, les Transformateurs peuvent gérer les dépendances à long terme plus efficacement que les modèles précédents.
+
+#### Attention croisée
+L'attention croisée se produit lorsque le modèle traite deux séquences distinctes, comme dans les tâches de traduction ou de génération de texte. Dans ce cas, le modèle utilise les informations d'une séquence (par exemple, le texte source) pour informer le traitement de l'autre séquence (par exemple, le texte cible). Chaque mot de la séquence cible utilise l'attention croisée pour se concentrer sur les mots pertinents de la séquence source. Cela permet de mieux aligner les mots entre les deux séquences et de générer des traductions ou des réponses plus précises et contextuellement appropriées.
 
 Les principales composantes de l'attention incluent :
 - **Query (requête)** : Représentation du mot actuel.
@@ -335,3 +343,17 @@ Le score d'attention est calculé en multipliant les Queries par les Keys, suivi
 Le **Multi-Head Attention** est une extension de l'auto-attention, où plusieurs mécanismes d'attention sont appliqués en parallèle, permettant au modèle de capturer différents types de relations contextuelles simultanément. Chaque "head" d'attention apprend à se concentrer sur différents aspects de la séquence, enrichissant la représentation contextuelle.
 
 Les Transformateurs, grâce à leur mécanisme d'attention et leur architecture flexible, ont non seulement surmonté les limitations des modèles précédents, mais ont également ouvert de nouvelles perspectives pour les applications NLP, rendant les modèles pré-entraînés comme BERT, GPT et T5 incontournables dans le domaine.
+
+### Exemple d'utilisation des différents types d'attention dans un modèle de Transformer
+
+#### Contexte
+Imaginons que nous utilisons un modèle de transformateur pour traduire la phrase : "Le détective présent sur l'Orient-Express examine la scène du crime et désigne le ____."
+
+#### Attention
+Lors de la traduction de cette phrase en anglais, le mécanisme d'attention aide le modèle à se concentrer sur les mots pertinents du texte source français pour générer chaque mot du texte cible anglais. Par exemple, pour traduire "désigne", le modèle se concentre sur les mots contextuellement pertinents comme "présent", "scène du crime", etc.
+
+#### Auto-attention
+Dans la phase de décodage, lorsque le modèle génère chaque mot de la traduction anglaise, il utilise l'auto-attention pour capturer les relations entre les mots générés jusqu'à présent. Par exemple, si le modèle a déjà généré "The detective on the Orient Express examines the crime scene and points to the ____," il utilisera l'auto-attention pour déterminer que "points to" doit être suivi par un mot comme "butler" (majordome).
+
+#### Attention croisée
+Lors de la phase de décodage, chaque mot de la séquence cible anglaise utilise l'attention croisée pour se concentrer sur les mots pertinents de la séquence source française. Par exemple, lors de la génération du mot "butler", le modèle se concentre sur les mots pertinents de la phrase source "Le détective présent sur l'Orient-Express examine la scène du crime et désigne le ____" pour s'assurer que le mot généré est contextuellement approprié.
