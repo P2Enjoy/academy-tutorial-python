@@ -130,8 +130,6 @@ Les premiers modèles de langage ont été fondamentaux pour la compréhension e
 
    Après avoir formé un modèle Word2Vec, les vecteurs représentant "chat" et "chien" seraient proches l'un de l'autre dans l'espace vectoriel, car ils apparaissent dans des contextes similaires (après "Le" et avant "aime").
 
-   Bien sûr ! Voici un exemple détaillé de la manière dont GloVe fonctionne et produit des représentations vectorielles des mots :
-
 Pour illustrer GloVe, considérons un petit corpus de texte composé de trois phrases :
 
 1. "Le chat aime dormir."
@@ -318,8 +316,6 @@ Les Transformateurs ont ouvert la voie à une série de modèles pré-entraîné
 - **GPT (Generative Pre-trained Transformer)** : Développé par OpenAI, GPT se base sur une architecture de décodeur de Transformer. GPT se distingue par son approche de génération de texte, capable de produire du texte cohérent et contextuellement pertinent. GPT-3, en particulier, est connu pour son immense capacité, avec 175 milliards de paramètres, ce qui lui permet de générer des réponses de haute qualité dans de nombreux contextes conversationnels.
 
 - **T5 (Text-To-Text Transfer Transformer)** : T5, également développé par Google, unifie toutes les tâches NLP sous un même format : la transformation de texte en texte. Que ce soit pour la traduction, le résumé, ou la classification, T5 traite chaque tâche comme un problème de transformation de texte, ce qui simplifie l'architecture et l'entraînement.
-
-Bien sûr, ajoutons l'explication de l'attention croisée à cette explication :
 
 ---
 
