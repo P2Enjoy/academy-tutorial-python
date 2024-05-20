@@ -334,11 +334,33 @@ Dans les Transformers, chaque mot de la séquence considère l'ensemble des autr
 #### Attention croisée
 L'attention croisée se produit lorsque le modèle traite deux séquences distinctes, comme dans les tâches de traduction ou de génération de texte. Dans ce cas, le modèle utilise les informations d'une séquence (par exemple, le texte source) pour informer le traitement de l'autre séquence (par exemple, le texte cible). Chaque mot de la séquence cible utilise l'attention croisée pour se concentrer sur les mots pertinents de la séquence source. Cela permet de mieux aligner les mots entre les deux séquences et de générer des traductions ou des réponses plus précises et contextuellement appropriées.
 
-Les principales composantes de l'attention incluent :
-- **Query (requête)** : Représentation du mot actuel.
-- **Key (clé)** : Représentation des autres mots de la séquence.
-- **Value (valeur)** : Information associée aux autres mots.
-Le score d'attention est calculé en multipliant les Queries par les Keys, suivi d'une normalisation par une fonction softmax pour obtenir les pondérations. Ces pondérations sont ensuite utilisées pour calculer une somme pondérée des Values, produisant une nouvelle représentation du mot actuel.
+**Les principales composantes de l'attention incluent :**
+
+**Query (requête) :** Représentation du mot actuel pour lequel nous voulons trouver les mots pertinents dans la séquence. C'est une sorte de "question" que le modèle pose pour déterminer l'importance des autres mots par rapport à ce mot actuel.
+
+**Key (clé) :** Représentation des autres mots de la séquence. Chaque mot a une clé associée qui est utilisée pour mesurer la similarité avec la requête.
+
+**Value (valeur) :** Information associée aux autres mots. Les valeurs sont les données que nous voulons agréger, pondérées par les scores d'attention calculés.
+
+Le mécanisme d'attention fonctionne comme suit :
+
+1. **Calcul des Scores d'Attention :** Le score d'attention est calculé en multipliant les Queries par les Keys. Cette multiplication mesure la similarité ou la pertinence entre le mot actuel (requête) et les autres mots (clés) de la séquence.
+
+2. **Normalisation :** Les scores obtenus sont normalisés en utilisant une fonction softmax. Cette étape transforme les scores en probabilités, indiquant l'importance relative de chaque mot dans le contexte de la séquence.
+
+3. **Pondération des Values :** Les pondérations obtenues après normalisation sont utilisées pour calculer une somme pondérée des Values. Chaque valeur est multipliée par la pondération correspondante.
+
+4. **Nouvelle Représentation :** La somme pondérée des Values produit une nouvelle représentation du mot actuel. Cette représentation intègre l'information contextuelle des mots les plus pertinents de la séquence.
+
+**Attention croisée :** Dans le cadre des Transformers, l'attention croisée se produit principalement entre l'encodeur et le décodeur dans les tâches de traduction et autres génératrices de séquences. Voici comment elle fonctionne :
+
+1. **Encodeur-Décodeur Interaction :** Le décodeur utilise les Queries pour chaque mot de la séquence cible (texte à générer) et les Keys/Values de la séquence source (texte d'origine).
+
+2. **Alignement :** Le décodeur aligne chaque mot de la séquence cible avec les mots pertinents de la séquence source en calculant les scores d'attention entre les Queries de la séquence cible et les Keys de la séquence source.
+
+3. **Contextualisation :** Les pondérations obtenues sont utilisées pour créer une somme pondérée des Values de la séquence source, fournissant ainsi une représentation contextuelle de la séquence cible par rapport à la séquence source.
+
+4. **Génération :** Cette représentation contextuelle aide le modèle à générer des mots de la séquence cible de manière cohérente et pertinente par rapport à la séquence source.
 
 Le **Multi-Head Attention** est une extension de l'auto-attention, où plusieurs mécanismes d'attention sont appliqués en parallèle, permettant au modèle de capturer différents types de relations contextuelles simultanément. Chaque "head" d'attention apprend à se concentrer sur différents aspects de la séquence, enrichissant la représentation contextuelle.
 
