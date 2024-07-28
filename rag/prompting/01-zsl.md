@@ -64,3 +64,56 @@ Le "Zero-Shot Prompting" est une technique souvent utilisée dans le cadre des m
 - **Dépendance au Contexte** : La performance du modèle peut varier en fonction du contexte du prompt fourni, ce qui nécessite une certaine expertise dans la rédaction des prompts.
 
 Le Zero-Shot Prompting représente une avancée significative dans l'utilisation des modèles de langage, permettant une interaction intuitive et efficace avec la technologie tout en minimisant les besoins d'adaptation spécifique à des tâches.
+
+---
+
+Le "few-shot prompting" est une technique utilisée dans le domaine du traitement du langage naturel (NLP) et de l'intelligence artificielle. Elle fait souvent référence à la capacité d'un modèle, comme ceux de la famille GPT, à réaliser des tâches avec un très petit nombre d'exemples fournis dans une requête, en comparaison avec des approches "zero-shot" (sans exemples) et "one-shot" (un seul exemple).
+
+### Explication :
+
+1. **Contexte** : Traditionnellement, les modèles de langage étaient entraînés sur de grandes quantités de données pour apprendre à effectuer des tâches spécifiques. Cependant, il est souvent impraticable ou coûteux de rassembler d'énormes ensembles de données pour chaque nouvelle tâche.
+
+2. **Exemples de Few-Shot** : Dans le few-shot prompting, on fournit au modèle quelques exemples, parfois aussi peu que deux ou trois, afin de l'aider à mieux comprendre le contexte ou le format attendu de la réponse. Par exemple, si vous souhaitez que le modèle traduise des phrases, vous pourriez lui donner deux ou trois exemples de phrases traduites avant de poser votre propre question.
+
+3. **Avantages** : Cette approche permet d'adapter rapidement un modèle à de nouvelles tâches sans avoir besoin d'un fine-tuning coûteux. Cela le rend flexible et utile dans des situations variées où les données peuvent être rares ou inaccessibles.
+
+4. **Applications** : Le few-shot prompting est particulièrement utile dans des domaines comme le résumé de texte, la traduction, la réponse à des questions, ou même des tâches d’analyse de sentiments, où il peut être nécessaire d'interpréter des instructions ou des questions d'une manière spécifique.
+
+En résumé, le few-shot prompting est une méthode efficace qui permet d'utiliser des modèles de langage avancés pour accomplir des tâches variées avec un minimum d'exemples, rendant la technologie plus accessible et polyvalente.
+
+---
+
+Le "Chain-of-Thought (CoT) Prompting" est une technique utilisée pour améliorer la performance des modèles de traitement du langage naturel, comme les assistants virtuels ou les systèmes de dialogue. Cette méthode consiste à encourager le modèle à réfléchir étape par étape avant de donner une réponse finale. Cela est particulièrement utile pour résoudre des problèmes complexes ou pour répondre à des questions qui nécessitent un raisonnement approfondi.
+
+### Explication détaillée
+
+Lorsqu'un modèle est amené à répondre directement à une question, il peut sauter des étapes importantes de raisonnement. Le "Chain-of-Thought Prompting" vise à structurer la réponse en demandant au modèle de décomposer le problème en plusieurs étapes logiques. Par exemple, au lieu de simplement demander "Quel est le résultat de 5 + 7 ?", on pourrait formuler un prompt qui incite le modèle à identifier d'abord les nombres, puis à effectuer l'addition.
+L'utilisation du Chain-of-Thought prompting est essentielle pour améliorer la compréhension et la précision dans le traitement des informations. En forçant le modèle à expliquer son raisonnement, cela engendre une meilleure transparence et fiabilité des réponses générées. Au fur et à mesure que les modèles de langage continuent d'évoluer, cette technique offre une avenue prometteuse pour surmonter les limitations des systèmes d'IA actuels.
+
+### Exemple pratique
+
+Imaginons que l'on souhaite enseigner à un modèle comment résoudre une équation mathématique telle que \(x + 5 = 12\). Voici comment on pourrait structurer le prompt :
+
+1. **Énoncé du problème** : "Résoudre l'équation suivante : \(x + 5 = 12\)."
+2. **Étape 1** : "Pour isoler \(x\), il faut soustraire 5 des deux côtés de l'équation."
+3. **Étape 2** : "Donc, je vais avoir \(x = 12 - 5\)."
+4. **Étape 3** : "Calculons \(12 - 5\), ce qui donne \(7\)."
+5. **Conclusion** : "Donc, la solution de l'équation est \(x = 7\)."
+
+Dans ce cas, chaque étape de la solution est clairement énoncée, ce qui permet de suivre le raisonnement jusqu'à la conclusion.
+
+### Applications spécifiques
+
+Le "Chain-of-Thought Prompting" peut être appliqué dans divers contextes :
+
+1. **Éducation** : Les étudiants peuvent bénéficier d'une approche étape par étape pour résoudre des problèmes de mathématiques, de sciences et d'autres sujets.
+2. **Systèmes de dialogue** : Les assistants virtuels peuvent fournir des réponses plus précises et compréhensibles aux utilisateurs, en expliquant leur raisonnement.
+3. **Rédaction assistée** : Les modèles peuvent également aider les écrivains en structurant leurs idées de manière plus logique et en suggérant des étapes pour développer des arguments ou des narrations.
+4. **Instruction** : En enseignant des concepts mathématiques aux élèves, on peut les encourager à verbaliser leur processus de pensée comme moyen d'apprentissage.
+5. **Développement de l'IA** : Lors de la formation de modèles de langage, les chercheurs peuvent utiliser cette technique pour améliorer la capacité de l'IA à résoudre des problèmes complexes.
+6. **Dialogue interactif** : Dans les applications de chatbot, cette méthodologie permet de mieux comprendre les intentions de l'utilisateur, en suivant le fil de sa pensée.
+
+En synthèse, cette méthode ne se contente pas de fournir une réponse, mais rend le processus de pensée transparent, ce qui peut améliorer les résultats et l'apprentissage dans diverses applications.
+
+---
+
