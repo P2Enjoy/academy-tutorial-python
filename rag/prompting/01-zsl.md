@@ -117,3 +117,29 @@ En synthèse, cette méthode ne se contente pas de fournir une réponse, mais re
 
 ---
 
+Le **Self-Consistency Prompting** est une technique issue du domaine de l'intelligence artificielle et du traitement du langage naturel. Cette méthode vise à améliorer la fiabilité des réponses générées par un modèle de langage en combinant les résultats de plusieurs appels à ce modèle. Voici une explication détaillée de la méthode :
+
+### Explication du Self-Consistency Prompting
+
+1. **Principe de Base** : L'idée fondamentale est de tirer parti de la nature probabiliste des modèles de langage. Quand un modèle génère une réponse à une question ou une demande spécifique, il peut produire différentes réponses en fonction des variations du contexte ou du prompt initial. En utilisant le Self-Consistency Prompting, on génère plusieurs réponses à la même question et on les compare pour déterminer laquelle semble la plus cohérente ou appropriée.
+
+2. **Mécanisme** : Pour utiliser cette méthode, un utilisateur pose une question à un modèle de langage, puis demande plusieurs réponses indépendantes. Ensuite, il peut choisir la réponse qui apparait comme la plus fréquente ou la plus convaincante parmi celles générées. Cela repose sur l'idée que les réponses les plus cohérentes ou les plus vraisemblables auront tendance à se répéter.
+
+3. **Exemple Pratique** : 
+   - Supposons que vous demandiez au modèle : "Quel est le meilleur moyen de cuire des œufs ?" Vous pourriez lui demander plusieurs fois de fournir des réponses (par exemple 5 fois).
+   - Les réponses pourraient varier, en suggérant des méthodes comme "les faire frémir", "les brouiller", "les pocher", etc.
+   - Après avoir collecté ces réponses, vous pourriez observer que "les brouiller" ou "les faire frémir" sont mentionnées le plus fréquemment, ce qui pourrait vous amener à conclure que ces méthodes sont considérées comme parmi les meilleures.
+
+### Utilisation du Self-Consistency Prompting
+
+**Applications Pratiques** : 
+- **Recherche d'informations** : Cette méthode peut être utilisée pour extraire des informations plus fiables en demandant alternativement au modèle de répondre à une question complexe ou subjective.
+- **Rédaction et créativité** : Dans les contextes créatifs, comme le brainstorming d'idées ou la rédaction d'histoires, le self-consistency prompting peut aider à identifier les thèmes récurrents ou les idées les plus solides.
+- **Validation de réponses** : Par exemple, dans le domaine éducatif, un enseignant pourrait utiliser cette technique pour vérifier la précision des réponses données à des questions ouvertes en évaluant les variations de réponses des élèves.
+- **Retrieval-Augmented Generation (RAG):** En combinant des modèles de langage avec des bases de données d'informations, on peut générer plusieurs réponses avant de faire une synthèse.
+- **Questions-Réponses:** Pour des systèmes automatisés de questions-réponses, le "self-consistency" peut aider à améliorer la précision des réponses en validant les résultats.
+- **Création de contenu:** Lors de l'écriture assistée par IA, cette approche peut aider à garantir que le contenu produit est cohérent et pertinent par rapport au sujet.
+
+### Conclusion
+
+Le Self-Consistency Prompting est une approche robuste pour améliorer la qualité des réponses générées par les modèles de langage, en utilisant la redondance d'informations comme un indicateur de cohérence et de fiabilité. Cette technique est particulièrement utile dans des situations où la subjectivité est élevée, ou lorsque la recherche de faits précis et de recommandations est cruciale. En appliquant cette méthode, on peut obtenir une vision plus claire et plus fiable des informations traitées par l'IA.
