@@ -143,3 +143,41 @@ Le **Self-Consistency Prompting** est une technique issue du domaine de l'intell
 ### Conclusion
 
 Le Self-Consistency Prompting est une approche robuste pour améliorer la qualité des réponses générées par les modèles de langage, en utilisant la redondance d'informations comme un indicateur de cohérence et de fiabilité. Cette technique est particulièrement utile dans des situations où la subjectivité est élevée, ou lorsque la recherche de faits précis et de recommandations est cruciale. En appliquant cette méthode, on peut obtenir une vision plus claire et plus fiable des informations traitées par l'IA.
+
+---
+
+Le "Generated Knowledge Prompting", ou "invitation à la connaissance générée" en français, est une technique utilisée dans le domaine de l'intelligence artificielle, plus spécifiquement dans le contexte des modèles de langage (LLM, pour "Language Models"). Cette méthode vise à améliorer les réponses fournies par un modèle en l'incitant à accéder à des informations spécifiques ou à intégrer des données additionnelles qui pourraient enrichir sa réponse.
+
+### Explication
+
+Lorsqu'un modèle de langage génère du texte en réponse à une question ou à une demande, il le fait à partir d'un ensemble de données qu'il a apprises lors de sa formation. Cependant, ces modèles ne comprennent pas réellement le monde et n'ont pas accès à des données en temps réel. Les "prompts" (invites) de connaissance générée servent alors à guider le modèle pour qu'il sorte des réponses qui semblent plus informées et pertinentes.
+
+Le concept repose sur l'idée que si le modèle est correctement "guidé" ou "invité", il peut produire des réponses qui semblent mieux informées en utilisant sa capacité argumentative et son accès à un vaste répertoire d'informations.
+
+### Exemples Pratiques
+
+1. **Exemple de Prompt Standard :**
+   - Prompt : "Quel est le capital de la France ?"
+     - Réponse générée : "La capitale de la France est Paris."
+   - Dans ce cas, le prompt standard amène une réponse précise et factuelle, mais il est très simple.
+
+2. **Exemple de Prompt avec Connaissances Générées :**
+   - Prompt : "Pourriez-vous me parler de l'importance historique de Paris au cours du XXe siècle ?"
+     - Réponse générée : "Paris a joué un rôle majeur au cours du XXe siècle, étant le cœur de nombreux événements politiques, culturels et artistiques. De la libération en 1944 à Mai 68, Paris a été le battleground d’idées et de mouvements qui ont façonné l'Europe moderne."
+   - Ici, le prompt incite le modèle à fournir non seulement une réponse factuelle sur Paris, mais aussi à contextualiser son importance dans un cadre historique plus large.
+
+### Applications Spécifiques
+
+1. **Éducation :**
+   Les enseignants peuvent utiliser le "Generated Knowledge Prompting" pour élaborer des évaluations, poser des questions ouvertes qui encouragent des réponses développées et nuancées sur des sujets historiques, scientifiques ou littéraires.
+
+2. **Marketing et Contenu :**
+   Les spécialistes du marketing peuvent créer des campagnes publicitaires qui exploitent cette technique pour générer du contenu engageant, en demandant au modèle d'expliquer pourquoi un produit est essentiel pour un consommateur cible ou en générant des histoires autour d'une marque.
+
+3. **Développement de Logiciels :**
+   Les développeurs de logiciels peuvent utiliser le "Generated Knowledge Prompting" pour créer des chatbots intelligents qui répondent aux requêtes des utilisateurs en fournissant des informations précises et pertinentes basées sur des contextes particuliers.
+
+En résumé, le "Generated Knowledge Prompting" est une technique qui permet d'orienter les réponses d'IA de manière à les rendre plus utiles, diversifiées et pertinentes selon les besoins de l'utilisateur. Cette méthode nous aide à tirer le meilleur parti des capacités des modèles de langage tout en améliorant leur applicabilité dans diverses situations.
+
+---
+
