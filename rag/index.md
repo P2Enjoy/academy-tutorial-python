@@ -32,3 +32,13 @@ https://llama.meta.com/docs/model-cards-and-prompt-formats/meta-llama-3/
 https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/Huggingface_QuickStart.md
 https://www.kaggle.com/code/ncho11/introduction-to-prompt-engineering-using-mistral
 https://docs.mistral.ai/capabilities/guardrailing/
+
+----
+
+Vidéo:
+https://www.loom.com/share/205800f129c44f1b93a82f82ba8350d5?sid=8c635e10-7b59-4974-a25a-9ae44f1dabcb
+
+Support:
+
+https://github.com/P2Enjoy/academy-tutorial-python/edit/main/rag/rag/inroduction.md
+https://arxiv.org/abs/2005.11401
