@@ -97,3 +97,13 @@ Le processus de calcul dans l'IA et le machine learning repose sur plusieurs cou
 
 4. **Interopérabilité et optimisation**  
    Les différents backends permettent aux développeurs de choisir le meilleur matériel pour leurs tâches. Les frameworks de deep learning ajustent automatiquement le type de matériel à utiliser, que ce soit via CUDA (pour NVIDIA), ROCm (pour AMD), ou oneAPI (pour Intel). **OpenCL** fournit une option standardisée, mais les solutions propriétaires (CUDA, ROCm, METAL) sont généralement plus performantes car elles sont spécifiquement optimisées pour le matériel de chaque fabricant.
+
+---
+
+Sources:
+- https://docs.anaconda.com/miniconda/
+- https://pytorch.org/get-started/locally/
+- https://docs.nvidia.com/deeplearning/cudnn/latest/reference/support-matrix.html
+- https://anaconda.org/
+- https://huggingface.co/docs/diffusers/en/installation
+- https://github.com/langchain-ai/langchain
