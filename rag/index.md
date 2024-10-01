@@ -75,6 +75,13 @@ https://www.loom.com/share/fa82dc068a7f4dccbb9e948b4b4f489d
 
 Support:  
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/01-develoment.md
+- https://ipywidgets.readthedocs.io/en/stable/user_install.html
+
+# Installation d'un gestionnaire des modèles de language (Ollama)
+
+Support:  
+- https://ollama.com/
+- https://ollama.com/search
 
 
 
