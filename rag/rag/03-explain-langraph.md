@@ -115,11 +115,11 @@ Dans cet exemple, nous avons initialisé un modèle de langage, défini l'état 
 
 ## 🔍 Visualisation
 
-LangGraph propose des outils pour visualiser vos graphes, ce qui est particulièrement utile lorsque les graphes deviennent complexes.  
-Exemple de visualisation du graphe de chat bot précédent.
+LangGraph propose des outils pour visualiser vos graphes, ce qui est particulièrement utile lorsque les graphes deviennent complexes. Exemple de visualisation du graphe de chat bot précédent.
 
 ```python
 from IPython.display import Image, display
 display(Image(graph.get_graph().draw_mermaid_png()))
 ```
 
+![Screenshot](https://github.com/P2Enjoy/academy-tutorial-python/blob/c9908266e53b9b7910064dd80a658ce431fbd398/rag/rag/Screenshot%20from%202024-10-04%2019-43-35.png)
