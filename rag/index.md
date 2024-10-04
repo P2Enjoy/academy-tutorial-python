@@ -96,5 +96,11 @@ Support:
 - https://ollama.com/
 - https://ollama.com/search
 
+# Introduction à LangGraph, LangChain et mon premier chatbot
+https://www.loom.com/share/89c2350fca8c44988bb48be482e8453e?sid=ca70e804-2f9e-466a-ba5e-5d2e7458e211
 
+
+Support:
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/03-explain-langraph.md
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/04-explain-langchain.md
 
