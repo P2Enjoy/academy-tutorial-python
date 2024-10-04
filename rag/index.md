@@ -15,7 +15,8 @@ https://www.loom.com/share/279b6dd5a81b46a5990750e78ea123f3?sid=ebac4b6d-45d7-43
 
 ## Support:
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/UE1-introduction.md
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/UE1-attention_is_all_you_need-script.md  
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/UE1-attention_is_all_you_need-script.md
+- https://arxiv.org/abs/2005.11401
 
 ----
 
@@ -24,11 +25,15 @@ https://www.loom.com/share/279b6dd5a81b46a5990750e78ea123f3?sid=ebac4b6d-45d7-43
 ## Programmer un LLM, apprendre les bases du prompt-engineering
 https://www.loom.com/share/10e635fc9e4148ccb0018566c6c94880?sid=048db4c0-0752-403f-9991-94d2debf4ad5  
 
+Supports:  
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/02-best_practices.md  
+
 ## Programmer un LLM, les méthodes avancées de prompts et les techniques de fiabilisation ou réflexion
 https://www.loom.com/share/9a1c25a3b2b948e78ebf1c82780b1935?sid=9e84160b-9213-4521-b034-8125aa6457f7  
 
 Support:  
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/01-zsl.md
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/03-general-usage-tips.md
 
 ## Les techniques d'attaque et les techniques de protection de nos systèmes augmentés à l'IA générative
 https://www.loom.com/share/bffc3e253cd24b888fcbdc0360486383?sid=8a429f5e-f506-4976-89f9-85b65f72216f
@@ -53,12 +58,16 @@ https://www.loom.com/share/e0dae18903bf42baaf4d0cedec0e64f6?sid=54594dbf-614f-47
 https://www.loom.com/share/458c0f640dc04edb8b647180606c942e?sid=4aa537d0-12eb-4165-b025-9b2d0e7deb27  
 
 Supports:  
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/ressource-system-prompt-legifrance.md
 - https://www.vie-publique.fr/flux-rss
 - https://www.economie.gouv.fr/rss
 - https://www.service-public.fr/P10008
 - https://platform.openai.com/docs/assistants/tools/file-search?context=streaming&lang=python
 - https://platform.openai.com/docs/assistants/tools/function-calling
-- https://platform.openai.com/docs/guides/embeddings  
+- https://platform.openai.com/docs/guides/embeddings
+
+Pour aller plus loin:
+- https://github.com/openai/openai-cookbook/tree/main/examples
 
 ----
 
@@ -74,10 +83,14 @@ https://www.loom.com/share/0004a13391ff4f99b969bdf0b6478915
 https://www.loom.com/share/fa82dc068a7f4dccbb9e948b4b4f489d
 
 Support:  
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/01-develoment.md
+- https://docs.docker.com/engine/install/ubuntu/
+- https://ubuntu.com/nvidia
 - https://ipywidgets.readthedocs.io/en/stable/user_install.html
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/01-develoment.md
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/02-lang-family.md
 
 # Installation d'un gestionnaire des modèles de language (Ollama)
+https://www.loom.com/share/72a2bfa65c674ec082756aa37d180606?sid=36dca458-b9bc-485e-908e-f76e4b76ea3c
 
 Support:  
 - https://ollama.com/
