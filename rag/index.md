@@ -108,6 +108,7 @@ Support:
 - https://langchain-ai.github.io/langgraph/reference/graphs/
 - https://smith.langchain.com/hub
 - https://python.langchain.com/docs/concepts
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/BBS_p1.ipynb
 
 ## Explication complète de l'architecture de Langgraph avec exempless
 
