@@ -89,18 +89,29 @@ Support:
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/01-develoment.md
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/02-lang-family.md
 
-# Installation d'un gestionnaire des modèles de language (Ollama)
+## Installation d'un gestionnaire des modèles de language (Ollama)
 https://www.loom.com/share/72a2bfa65c674ec082756aa37d180606?sid=36dca458-b9bc-485e-908e-f76e4b76ea3c
 
 Support:  
 - https://ollama.com/
 - https://ollama.com/search
 
-# Introduction à LangGraph, LangChain et mon premier chatbot
+## Introduction à LangGraph, LangChain et mon premier chatbot
 https://www.loom.com/share/89c2350fca8c44988bb48be482e8453e?sid=ca70e804-2f9e-466a-ba5e-5d2e7458e211
+
+## Explication complète de l'architecture de Langchain avec exemples
+https://www.loom.com/share/d3a38f9516f94df9b3f764886c1912fe?sid=e880dc07-4740-439a-a6f0-a1e23d888147
+
+Support:
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/04-explain-langchain.md
+- https://langchain-ai.github.io/langgraph/concepts/low_level/#graphs
+- https://langchain-ai.github.io/langgraph/reference/graphs/
+- https://smith.langchain.com/hub
+- https://python.langchain.com/docs/concepts
+
+## Explication complète de l'architecture de Langgraph avec exempless
 
 
 Support:
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/03-explain-langraph.md
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/04-explain-langchain.md
-
+- 
