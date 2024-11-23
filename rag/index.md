@@ -29,7 +29,7 @@ Supports:
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/02-best_practices.md  
 
 ## Programmer un LLM, les méthodes avancées de prompts et les techniques de fiabilisation ou réflexion
-(a refaire) https://www.loom.com/share/9a1c25a3b2b948e78ebf1c82780b1935?sid=9e84160b-9213-4521-b034-8125aa6457f7  
+https://www.loom.com/share/9a1c25a3b2b948e78ebf1c82780b1935?sid=9e84160b-9213-4521-b034-8125aa6457f7  
 
 Support:  
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/01-zsl.md
@@ -52,7 +52,7 @@ Support:
 - https://arxiv.org/abs/2005.11401
 
 ## Créer et alimenter une mémoire non-paramétrique (vectorstore)
-(a refaire) https://www.loom.com/share/e0dae18903bf42baaf4d0cedec0e64f6?sid=54594dbf-614f-4760-92db-8829a2c620a7  
+https://www.loom.com/share/e0dae18903bf42baaf4d0cedec0e64f6?sid=54594dbf-614f-4760-92db-8829a2c620a7  
 
 ## Deployer en ligne notre assistant juridique
 https://www.loom.com/share/458c0f640dc04edb8b647180606c942e?sid=4aa537d0-12eb-4165-b025-9b2d0e7deb27  
@@ -80,7 +80,7 @@ https://www.loom.com/share/b7646ecdca694f42a64fbdfeab3d4e51
 https://www.loom.com/share/0004a13391ff4f99b969bdf0b6478915
 
 ## Installation et configuration de l'IDE scientifique IA/ML (jupyter)
-(a refaire) https://www.loom.com/share/fa82dc068a7f4dccbb9e948b4b4f489d
+https://www.loom.com/share/fa82dc068a7f4dccbb9e948b4b4f489d
 
 Support:  
 - https://docs.docker.com/engine/install/ubuntu/
@@ -97,7 +97,7 @@ Support:
 - https://ollama.com/search
 
 ## Introduction à LangGraph, LangChain et mon premier chatbot
-(a refaire) https://www.loom.com/share/89c2350fca8c44988bb48be482e8453e?sid=ca70e804-2f9e-466a-ba5e-5d2e7458e211
+https://www.loom.com/share/89c2350fca8c44988bb48be482e8453e?sid=ca70e804-2f9e-466a-ba5e-5d2e7458e211
 
 ## Explication complète de l'architecture de Langchain avec exemples
 https://www.loom.com/share/d3a38f9516f94df9b3f764886c1912fe?sid=e880dc07-4740-439a-a6f0-a1e23d888147
