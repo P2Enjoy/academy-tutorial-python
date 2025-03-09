@@ -110,9 +110,10 @@ Support:
 - https://python.langchain.com/docs/concepts
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/BBS_p1.ipynb
 
-## Explication complète de l'architecture de Langgraph avec exempless
-
+## Explication complète de l'architecture de Langgraph avec exemples
+Videos en cours de upload
 
 Support:
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/03-explain-langraph.md
-- 
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/BBS_p2.ipynb
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/SetupBBS.ipynb
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/Machine_Learning_in_a_RAG_pipeline.ipynb
