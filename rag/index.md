@@ -14,8 +14,8 @@ https://www.loom.com/share/6a347c3c541e4513ac47211efffcaf90?sid=3f6631b1-391b-45
 https://www.loom.com/share/279b6dd5a81b46a5990750e78ea123f3?sid=ebac4b6d-45d7-4379-8778-e49ad2213578  
 
 ## Support:
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/UE1-introduction.md
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/UE1-attention_is_all_you_need-script.md
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/theorie/UE1-introduction.md
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/theorie/UE1-attention_is_all_you_need-script.md
 - https://arxiv.org/abs/2005.11401
 
 ----
@@ -32,7 +32,7 @@ Supports:
 https://www.loom.com/share/9a1c25a3b2b948e78ebf1c82780b1935?sid=9e84160b-9213-4521-b034-8125aa6457f7  
 
 Support:  
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/01-zsl.md
+- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/01-prompt_engineering
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/prompting/03-general-usage-tips.md
 
 ## Les techniques d'attaque et les techniques de protection de nos systèmes augmentés à l'IA générative

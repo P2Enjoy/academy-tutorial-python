@@ -1,3 +1,5 @@
+## Le Zero-Shot Learning (ZSL)
+
 Le Zero-Shot Learning (ZSL) est une approche d'apprentissage automatique dans laquelle un modèle est capable de reconnaître et de classer des classes d'objets qu'il n'a jamais vues pendant son entraînement. Contrairement aux méthodes traditionnelles d'apprentissage supervisé qui nécessitent des données étiquetées pour chaque classe, le ZSL repose sur des descriptions abstraites ou des représentations des classes inconnues, souvent sous forme de caractéristiques sémantiques.
 
 ### Principe de base
@@ -67,6 +69,8 @@ Le Zero-Shot Prompting représente une avancée significative dans l'utilisation
 
 ---
 
+## Le "few-shot prompting"
+
 Le "few-shot prompting" est une technique utilisée dans le domaine du traitement du langage naturel (NLP) et de l'intelligence artificielle. Elle fait souvent référence à la capacité d'un modèle, comme ceux de la famille GPT, à réaliser des tâches avec un très petit nombre d'exemples fournis dans une requête, en comparaison avec des approches "zero-shot" (sans exemples) et "one-shot" (un seul exemple).
 
 ### Explication :
@@ -117,6 +121,8 @@ En synthèse, cette méthode ne se contente pas de fournir une réponse, mais re
 
 ---
 
+## Le **Self-Consistency Prompting**
+
 Le **Self-Consistency Prompting** est une technique issue du domaine de l'intelligence artificielle et du traitement du langage naturel. Cette méthode vise à améliorer la fiabilité des réponses générées par un modèle de langage en combinant les résultats de plusieurs appels à ce modèle. Voici une explication détaillée de la méthode :
 
 ### Explication du Self-Consistency Prompting
@@ -145,6 +151,8 @@ Le **Self-Consistency Prompting** est une technique issue du domaine de l'intell
 Le Self-Consistency Prompting est une approche robuste pour améliorer la qualité des réponses générées par les modèles de langage, en utilisant la redondance d'informations comme un indicateur de cohérence et de fiabilité. Cette technique est particulièrement utile dans des situations où la subjectivité est élevée, ou lorsque la recherche de faits précis et de recommandations est cruciale. En appliquant cette méthode, on peut obtenir une vision plus claire et plus fiable des informations traitées par l'IA.
 
 ---
+
+## Le "Generated Knowledge Prompting"
 
 Le "Generated Knowledge Prompting", ou "invitation à la connaissance générée" en français, est une technique utilisée dans le domaine de l'intelligence artificielle, plus spécifiquement dans le contexte des modèles de langage (LLM, pour "Language Models"). Cette méthode vise à améliorer les réponses fournies par un modèle en l'incitant à accéder à des informations spécifiques ou à intégrer des données additionnelles qui pourraient enrichir sa réponse.
 
