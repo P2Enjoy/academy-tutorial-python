@@ -14,7 +14,7 @@ Décrit les diverses technologies open source et plateformes matérielles (Ubunt
 🔹 **Présentation comparative : LangGraph, LangChain, LangFlow et LangSmith**  
 Offre une vue d'ensemble claire des différentes bibliothèques et outils autour des modèles de langage de la "famille Lang". Chaque section détaille les spécificités techniques, les cas d'usages idéaux et formule des recommandations précises sur le choix de l'outil approprié selon les besoins spécifiques de développement.
 
-### [03-explain-langraph.md](./03-explain-langraph.md)
+### [03-explain-langgraph.md](./03-explain-langgraph.md)
 🔹 **Fonctionnement et concepts fondamentaux de LangGraph**  
 Présente en détail LangGraph, avec une explication des composants centraux : l'État, les Nœuds et les Arêtes. Il couvre également des concepts avancés comme les Super-steps, les types de graphes utilisés ainsi que des exemples pratiques et simplifiés illustrant clairement l'utilisation de cette bibliothèque pour construire des workflows complexes.
 

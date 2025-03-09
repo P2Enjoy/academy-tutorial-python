@@ -23,17 +23,6 @@ avec les LLMs :
 4. **Exemples concrets** : montrer le format de sortie souhaité
 5. **Approche graduelle** : progresser du zero-shot au few-shot, puis au fine-tuning si nécessaire
 
-### Conseils d'Utilisation Pratique
-
-Le document [`03-general-usage-tips.md`](./03-general-usage-tips.md) propose des conseils pratiques pour améliorer vos
-interactions avec les LLMs :
-
-- **Clarté des instructions** : formuler des directives précises et mesurables
-- **Structure optimale** : utiliser des délimiteurs et des formats clairs
-- **Longueur et audience** : adapter le contenu à son contexte d'utilisation
-- **Amélioration itérative** : affiner progressivement vos prompts
-- **Techniques avancées** : utiliser des exemples, limiter la longueur des réponses, donner du temps au modèle
-
 ### Système de Prompt pour Interface Légifrance
 
 Le document [`ressource-system-prompt-legifrance.md`](./ressource-system-prompt-legifrance.md) présente un système
