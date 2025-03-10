@@ -1,7 +1,3 @@
-Voici une proposition de README d'accueil qui respecte votre demande :  
-
----
-
 # 🚀 Bienvenue sur le Repository de Formations : Python & Intelligence Artificielle avec LLM
 
 Cet espace regroupe l'ensemble des ressources pédagogiques destinées à vous accompagner efficacement dans votre apprentissage, organisé en deux grandes sections :
