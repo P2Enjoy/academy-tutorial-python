@@ -35,7 +35,7 @@ conda install -c pytorch -c nvidia pytorch=2.5.1 torchvision=0.20.1 torchaudio=2
 
 # 🔹 Étape 7: Installation des bibliothèques ML/NLP
 echo "📚 Installation des bibliothèques ML/NLP..."
-conda install -c conda-forge -c nvidia tensorflow=2.14.0 -y
+conda install -c conda-forge -c nvidia tensorflow=2.17.0 -y
 conda install -c conda-forge transformers=4.49.0 -y
 conda install -c conda-forge ipywidgets -y  
 conda install -c conda-forge scikit-learn=1.6.1 -y 
@@ -47,14 +47,7 @@ echo "🌐 Installation des bibliothèques Langchain et AI supplémentaires..."
 echo "Filtering Conda-only packages. This may take some time..."
 # Loop through each package in the requirements file
 output_file="conda_requirements.txt"; > "$output_file"
-# conda list | awk 'NR>3 && $4 != "" {print $1 "==" $2}' | sed '/^#/d' | sed '/^__pip/d' | xargs -P 10 -I {} bash -c '
-#     package=$(awk -F "==" "{print \$1}" <<< "{}");
-#     version=$(awk -F "==" "{print \$2}" <<< "{}");
-#     # Check if package exists on PyPI
-#     if pip index versions "$package" &>/dev/null; then
-#         echo "$package==$version"
-#     fi
-# ' >> "$output_file";
+
 cat > "$output_file" <<EOF
 torch==2.5.1
 torchvision==0.20.1
