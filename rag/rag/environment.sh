@@ -55,7 +55,8 @@ torchaudio==2.5.1
 scikit-learn==1.6.1
 tiktoken==0.9.0
 transformers==4.49.0
-# tensorflow==2.14.0
+tensorflow==2.17.0
+grpcio==1.63.2
 EOF
 python -m pip install --no-cache-dir -r conda_requirements.txt \
     langchain==0.3.20 langchain-community==0.3.19 langgraph==0.3.5 \
