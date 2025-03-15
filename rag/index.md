@@ -111,9 +111,22 @@ Support:
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/BBS_p1.ipynb
 
 ## Explication complète de l'architecture de Langgraph avec exemples
-Videos en cours de upload
+https://www.loom.com/share/0b3cfca9031e4674aa4625c75893f926?sid=a20b62fd-ce18-4c58-bfb2-acb9fbd755de
 
 Support:
-- https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/BBS_p2.ipynb
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/SetupBBS.ipynb
 - https://github.com/P2Enjoy/academy-tutorial-python/blob/main/rag/rag/Machine_Learning_in_a_RAG_pipeline.ipynb
+- https://langchain-ai.github.io/langgraph/concepts/low_level/
+- https://langchain-ai.github.io/langgraph/reference/graphs/
+- https://colab.research.google.com/github/langchain-ai/langchain-academy/blob/main/module-1/chain.ipynb
+- https://colab.research.google.com/github/langchain-ai/langchain-academy/blob/main/module-1/simple-graph.ipynb
+- https://colab.research.google.com/github/langchain-ai/langchain-academy/blob/main/module-1/router.ipynb
+- https://colab.research.google.com/github/langchain-ai/langchain-academy/blob/main/module-1/agent.ipynb
+- https://colab.research.google.com/github/langchain-ai/langchain-academy/blob/main/module-1/agent-memory.ipynb
+- https://langchain-ai.github.io/langgraph/how-tos/configuration/#define-graph
+- https://langchain-ai.github.io/langgraph/
+- https://github.com/langchain-ai/langchain/tree/master/docs/docs/how_to
+- https://faiss.ai/
+- https://docs.trychroma.com/docs/overview/introduction
+- 
+- 
