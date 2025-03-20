@@ -68,7 +68,7 @@ python -m pip install --no-cache-dir -r conda_requirements.txt \
 python -m spacy download fr_core_news_sm
 
 # 🔹 Étape 9: Télécharge les fichiers externes utilisés par le notebook
-wget -q -O demo1.webp https://raw.githubusercontent.com/P2Enjoy/academy-tutorial-python/main/rag/rag/demo1.webp
+wget -q -O demo1.png https://raw.githubusercontent.com/P2Enjoy/academy-tutorial-python/main/rag/rag/demo1.png
 wget -q -O demo2.png https://raw.githubusercontent.com/P2Enjoy/academy-tutorial-python/main/rag/rag/demo2.png
 wget -q -O LangraphStudioProxy.py https://raw.githubusercontent.com/P2Enjoy/academy-tutorial-python/refs/heads/main/rag/rag/LangraphStudioProxy.py
 wget -q -O config.env https://raw.githubusercontent.com/P2Enjoy/academy-tutorial-python/refs/heads/main/rag/rag/config.env.exemple
