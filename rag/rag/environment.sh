@@ -64,7 +64,7 @@ python -m pip install --no-cache-dir -r conda_requirements.txt \
     langchain-ollama==0.2.3 langchain-chroma==0.2.2 \
     sentence_transformers==3.4.1 spacy==3.8.4 duckduckgo-search==7.5.1 \
     "pypdf[full]==5.3.1" faiss-gpu-cu11==1.10.0 chromadb==0.6.3 open_clip_torch==2.31.0 \
-    "nomic[local]==3.4.1" wikipedia==1.4.0
+    "nomic[local]==3.4.1" wikipedia==1.4.0 tf-keras==2.17.0
 python -m spacy download fr_core_news_sm
 
 # 🔹 Étape 9: Télécharge les fichiers externes utilisés par le notebook
@@ -78,6 +78,6 @@ if jupyter kernelspec list | grep -q "$ENV_NAME"; then
     echo "Kernel '$ENV_NAME' exists. Removing it..."
     jupyter kernelspec remove -f "$ENV_NAME"
 fi
-python -m ipykernel install --user --name $ENV_NAME --display-name "BBS"
+python -m ipykernel install --user --name $ENV_NAME
 
 echo "✅ Installation complète de l'environnement $ENV_NAME ! 🚀"
